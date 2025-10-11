@@ -1,12 +1,18 @@
+
+<div class="header">
+  <h1>Gomodoro</h1>
+  <p>The better pomodoro</p>
+</div>
+
 <main class="main">
   <div class="content">
     <div class="left-side">
-      <h1>Gomodoro</h1>
-      <p>The better pomodoro</p>
+      <app-timer #timer></app-timer>
+      <app-circle-factory [timer]="timer"></app-circle-factory>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
-      <timer></timer>
+      More Information
     </div>
   </div>
 </main>

@@ -1,0 +1,26 @@
+<div class="circle-container">
+    <svg class="circle-progress" viewBox="0 0 256 256">
+
+      <!-- The Background of the Circle -->
+        <circle
+          class="circle-bg"
+          cx="128"
+          cy="128"
+          [attr.r]="rad"
+          [style.stroke]="'#e0e0e0'"
+          [style.stroke-width]="stroke"
+        />
+        
+      <!-- The actual circle timer part -->
+        <circle
+          class="circle-progress-bar"
+          cx="128"
+          cy="128"
+          [attr.r]="rad"
+          [style.stroke-width]="stroke"
+          [style.stroke]="'#ff922f'"
+          [style.strokeDasharray]="circumference"
+          [style.strokeDashoffset]="distance"
+        />
+      </svg>    
+</div>
