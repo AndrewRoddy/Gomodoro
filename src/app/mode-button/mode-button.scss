@@ -1,0 +1,30 @@
+.mode {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #ff922f, #ff922f);
+  transition: all 0.25s ease;
+  
+  &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(255, 107, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &.break-mode {
+    background: linear-gradient(135deg, #625780, #625780);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+
+    &:hover {
+      box-shadow: 0 6px 14px rgba(46, 204, 113, 0.4);
+    }
+  }
+}

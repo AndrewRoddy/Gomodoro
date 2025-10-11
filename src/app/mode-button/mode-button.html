@@ -1,1 +1,6 @@
-<p>mode-button works!</p>
+<button
+    class="mode"
+    [class.break-mode]="cBreak()"
+    (click)="toggleMode()"
+> {{ cBreak() ? 'End Break' : 'Break'}}
+</button>

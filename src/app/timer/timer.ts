@@ -1,4 +1,4 @@
-import { effect, OnInit, OnDestroy, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal, Injectable } from "@angular/core";
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from "@angular/core";
 import { TimerService } from "../timer-service"
 
 @Component({
@@ -16,8 +16,10 @@ export class Timer {
 
     // Sets seconds to the signal seconds
     private cSeconds = signal(this.timerService.seconds());
-    // private cTotal = signal(this.timerService.total());
 
+    // Gets break mode dat
+    public cBreak = this.timerService.isBreak();
+    
     // Boolean toggle to show dashes or hide dashes
     private readonly showDashes = signal(false);
 
@@ -28,7 +30,20 @@ export class Timer {
         // Runs once every minute
         this.intervalId = setInterval(() => {
             // Adds one per second
-            const newValue = this.cSeconds() + 1;
+                        // Gets the break data
+            this.cBreak = this.timerService.isBreak();
+
+            // Adds or subtracts if on break
+            let val = 0;
+            if (!this.cBreak) val = 1;
+            if (this.cBreak) val = -4;
+
+            let newValue = this.cSeconds() + val;
+
+            // Prevents negative numbers
+            if (newValue < 0) newValue = 0;
+            
+            // Adds or subtracts 1 second from cSeconds
             this.cSeconds.set(newValue);
             // Updates the timer service seconds
             this.timerService.updateSeconds(newValue);
