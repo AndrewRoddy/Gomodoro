@@ -1,2 +1,2 @@
-# Flowmodoro (named Gomodoro sometimes)
-The best flowmodoro timer for 
+# Gomodoro
+The best pomodoro timer using the flowtime technique to calculate break times!

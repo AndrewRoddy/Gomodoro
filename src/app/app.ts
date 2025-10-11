@@ -1,0 +1,14 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Timer } from './app.timer';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.html',
+  styleUrl: './app.scss',
+  imports: [Timer],
+  standalone: true
+})
+export class App {
+  protected readonly title = signal('gomodoro');
+}
