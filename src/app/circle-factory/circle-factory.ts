@@ -23,11 +23,13 @@ export class CircleFactory {
   ];
 
   // Creates array of circles
-  public circles = signal<{ radius: number; seconds: number; total: number }[]>([]);
+  // public circles = signal<{ radius: number; seconds: number; total: number }[]>([]);
+  public circles = signal<{ radius: number; seconds: number; total: number; stroke: number; }[]>([]);
   
   
   private baseRadius = 100; // Starting radius
-  private radiusStep = 21; // Amount the next radius decreases
+  private baseStroke = 20;
+
   private cSeconds: number = 0; // Initializes seconds
   private cTotal: number = 0; // Initializes total
 
@@ -46,7 +48,8 @@ export class CircleFactory {
           {
             radius: this.baseRadius,
             seconds: 0,
-            total: this.cTotal
+            total: this.cTotal,
+            stroke: this.baseStroke
           }
         ]);
         this.firstCircle = true;
@@ -84,10 +87,19 @@ export class CircleFactory {
         
         // Adds a circle to the circle array
         updated.push({
-          radius: last.radius - this.radiusStep,
+          radius: last.radius * 0.81,
           seconds: 0,
-          total: this.cTotal
+          total: this.cTotal,
+          stroke: last.stroke * 0.79
         });
+        // updated.push({
+        //   radius: last.radius - this.radiusStep,
+        //   seconds: 0,
+        //   total: this.cTotal
+        // });
+
+        // Edits the radius step to be slightly less the next time
+        // this.radiusStep *= 0.8;
       }
       return updated;
 ;

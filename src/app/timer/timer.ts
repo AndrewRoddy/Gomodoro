@@ -32,8 +32,8 @@ export class Timer {
             this.cSeconds.set(newValue);
             // Updates the timer service seconds
             this.timerService.updateSeconds(newValue);
-        // }, 1000); // Once per second
-        }, 1); 
+        }, 1000); // Once per second
+ 
     }
         
     // Formats the remaining number of seconds
