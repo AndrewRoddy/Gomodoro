@@ -9,9 +9,12 @@ import { Timer } from "../timer/timer"
 })
 
 export class Circle {
+
+  // Sets the base values for a circle
   @Input() radius = 100;
   @Input() seconds = 0;
   @Input() total = 100;
+  @Input() stroke = 20;
 
 
   get circumference() {return 2 * Math.PI * this.radius; }
