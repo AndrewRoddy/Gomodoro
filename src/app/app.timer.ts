@@ -10,8 +10,6 @@ import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signa
 
 export class Timer {
     readonly total = 15;
-    readonly warnAt = 10;
-    readonly dangerAt = 5;
 
     readonly secondsRemaining = signal(this.total);
     readonly formattedRemaining = computed(() => 
