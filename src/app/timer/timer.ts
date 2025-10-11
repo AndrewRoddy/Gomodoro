@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from "@angular/core";
 
 @Component({
-    selector: 'app-timer',
-    template: '<div class="timer">{{ formattedRemaining() }}</div>',
-    styleUrls: ['./app.scss'],
+    selector: 'timer',
+    templateUrl: './timer.html',
+    // template: '<div class="timer">{{ formattedRemaining() }}</div>',
+    styleUrls: ['./timer.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true
 })

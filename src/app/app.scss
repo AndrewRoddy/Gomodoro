@@ -1,3 +1,10 @@
+.right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --electric-violet: oklch(53.18% 0.28 296.97);
@@ -32,19 +39,6 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.right-side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.timer {
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--gray-900);
 }
 
 h1 {

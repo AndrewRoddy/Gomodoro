@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Timer } from './app.timer';
+import { Timer } from './timer/timer';
 
 @Component({
   selector: 'app-root',
