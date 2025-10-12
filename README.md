@@ -45,3 +45,15 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 - [X] Create Angular Boiler Plate
 - [X] Create timer that counts up
 - [X] Create and link clock to timer
+
+### Building
+**Normally**
+```
+npm i
+ng serve
+```
+**On Website**
+Run inside `Gomodoro-src`
+```
+ng build --base-href="/Gomodoro/" --output-path=../Gomodoro
+```
