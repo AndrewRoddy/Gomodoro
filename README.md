@@ -45,6 +45,7 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 - [X] Create Angular Boiler Plate
 - [X] Create timer that counts up
 - [X] Create and link clock to timer
+- [ ] Implement 3js as the timer
 
 ### Building
 **Normally**
