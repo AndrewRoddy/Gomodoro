@@ -53,8 +53,11 @@ export class Timer {
         
     // Formats the remaining number of seconds
     readonly formattedRemaining = computed(() => {
+        let sec = this.cSeconds();
+        if (this.cBreak) sec = sec/4;
+
         if (this.showDashes()) return '--:--';
-        return this.formattedTime(this.cSeconds());
+        return this.formattedTime(sec);
     });
     
     // Allows the user to click on the time to edit the dashes
@@ -65,10 +68,14 @@ export class Timer {
     // Formats the time to only show minutes
     private formattedTime(totalSeconds: number) {
         let date: string = new Date(totalSeconds * 1000).toISOString();
-        if (this.cSeconds() < 10) return date.slice(18,19); // s
-        if (this.cSeconds() < 60) return date.slice(17,19);; // ss
-        if (this.cSeconds() < (60*60)) return date.slice(14,19) // mm:ss
-        if (this.cSeconds() < 10*(60*60)) return date.slice(12,19); // h:mm:ss
+
+        let sec = totalSeconds;
+        if (this.cBreak) sec = sec/4;
+
+        if (sec < 10) return date.slice(18,19); // s
+        if (sec < 60) return date.slice(17,19);; // ss
+        if (sec < (60*60)) return date.slice(14,19) // mm:ss
+        if (sec < 10*(60*60)) return date.slice(12,19); // h:mm:ss
         return date.slice(11,19); // hh:mm:ss
     }
 

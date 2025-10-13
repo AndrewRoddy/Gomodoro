@@ -18,9 +18,9 @@ export class CircleFactory {
   private timerService = inject(TimerService);
   
   // Gets list of all colors 
-  readonly colors = [
-    '#e0e0e0', '#ff922f', '#ff6e2e', '#ff4a2e', '#ffb32e', '#ffcc2e', '#ffbf83', '#ffe833'
-  ];
+  // readonly colors = [
+  //   '#e0e0e0', '#ff922f', '#ff6e2e', '#ff4a2e', '#ffb32e', '#ffcc2e', '#ffbf83', '#ffe833'
+  // ];
 
   // Creates array of circles
   // public circles = signal<{ radius: number; seconds: number; total: number }[]>([]);
@@ -32,6 +32,7 @@ export class CircleFactory {
 
   private cSeconds: number = 0; // Initializes seconds
   private cTotal: number = 0; // Initializes total
+  private cBreak: boolean = false; // Initializes total
 
   private firstCircle: boolean = false;
 
@@ -40,7 +41,8 @@ export class CircleFactory {
       // Gets the seconds and the total
       this.cSeconds = this.timerService.seconds();
       this.cTotal = this.timerService.total();
-
+      this.cBreak = this.timerService.isBreak();
+      
       // Creates the first circle only once
       if (!this.firstCircle) { 
         this.circles.update(circles => [
