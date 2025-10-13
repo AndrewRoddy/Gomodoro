@@ -26,8 +26,6 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 
 ### To Do
 
-- [ ] Have timer show break time when in break mode
-- [ ] Add back button for both websites I own
 
 User setting imporovements
 - [ ] Create settings menu 
@@ -59,11 +57,13 @@ Patreon integrations
     - Algorithm that automatically slowly decreases break time per hour worked (start 2:1 end at 5:1)
 
 ### To Do : Complete
-- [X] Create Angular Boiler Plate
-- [X] Create timer that counts up
-- [X] Create and link clock to timer
-- [X] Make timer circle continue to circle around at one hour
-- [X] Add break timer switch
+- [X] `10.12.2025` Have timer show acutal break time when in break mode
+- [X] `10.12.2025` Add back button for both websites I own
+- [X] `10.11.2025` Add break timer switch
+- [X] `10.10.2025` Make timer circle continue to circle around at one hour
+- [X] `10.10.2025` Create and link clock to timer
+- [X] `10.10.2025` Create timer that counts up
+- [X] `10.09.2025` Create Angular Boiler Plate
 
 ### Building
 ```
