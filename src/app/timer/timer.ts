@@ -54,7 +54,7 @@ export class Timer {
     // Formats the remaining number of seconds
     readonly formattedRemaining = computed(() => {
         let sec = this.cSeconds();
-        if (this.cBreak) sec = sec/4;
+        if (this.cBreak) sec = Math.ceil(sec/4);
 
         if (this.showDashes()) return '--:--';
         return this.formattedTime(sec);
@@ -69,13 +69,10 @@ export class Timer {
     private formattedTime(totalSeconds: number) {
         let date: string = new Date(totalSeconds * 1000).toISOString();
 
-        let sec = totalSeconds;
-        if (this.cBreak) sec = sec/4;
-
-        if (sec < 10) return date.slice(18,19); // s
-        if (sec < 60) return date.slice(17,19);; // ss
-        if (sec < (60*60)) return date.slice(14,19) // mm:ss
-        if (sec < 10*(60*60)) return date.slice(12,19); // h:mm:ss
+        if (totalSeconds < 10) return date.slice(18,19); // s
+        if (totalSeconds < 60) return date.slice(17,19);; // ss
+        if (totalSeconds < (60*60)) return date.slice(14,19) // mm:ss
+        if (totalSeconds < 10*(60*60)) return date.slice(12,19); // h:mm:ss
         return date.slice(11,19); // hh:mm:ss
     }
 
