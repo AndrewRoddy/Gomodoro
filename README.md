@@ -66,13 +66,7 @@ Patreon integrations
 - [X] Add break timer switch
 
 ### Building
-**Normally**
 ```
 npm i
 ng serve
-```
-**On Website**
-Run inside `Gomodoro-src`
-```
-ng build --base-href="/Gomodoro/" --output-path=../Gomodoro
 ```
