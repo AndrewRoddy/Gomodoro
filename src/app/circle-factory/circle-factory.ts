@@ -94,14 +94,15 @@ export class CircleFactory {
           total: this.cTotal,
           stroke: last.stroke * 0.79
         });
-        // updated.push({
-        //   radius: last.radius - this.radiusStep,
-        //   seconds: 0,
-        //   total: this.cTotal
-        // });
+      }
 
-        // Edits the radius step to be slightly less the next time
-        // this.radiusStep *= 0.8;
+      // Expected number of circles
+      const targetCount = Math.floor(this.cSeconds / this.cTotal) + 1;
+      
+      // Removes a circle if there are too many
+      if (updated.length > targetCount) {
+        // remove extra circles from the end
+        updated.splice(targetCount, updated.length - targetCount);
       }
       return updated;
 ;

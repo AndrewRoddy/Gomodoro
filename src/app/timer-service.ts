@@ -13,6 +13,7 @@ export class TimerService {
 
   
   // Minutes // 1 hour 60s*60m
+  // readonly total = signal(3);
   readonly total = signal(60*60);
   updateTotal(value: number) {
     this.total.set(value);
