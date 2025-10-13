@@ -28,8 +28,10 @@ export class Timer {
     private intervalId: any;
     
     constructor() {
+        
         // Runs once every minute
         this.intervalId = setInterval(() => {
+
             // Adds one per second
                         // Gets the break data
             this.cBreak = this.timerService.isBreak();

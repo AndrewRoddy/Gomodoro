@@ -33,8 +33,6 @@ User setting imporovements
 - [ ] User can choose to have it show circles or not by clicking on them
 
 Improve user experience :)
-- [ ] Make break circles function with removing 
-- [ ] Store the users break data
 - [ ] Add notification that says your break time is up
 
 Patreon integrations
@@ -64,6 +62,8 @@ Patreon integrations
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.13.2025` Store the users break data
+- [X] `10.13.2025` Make break circles function with removing 
 - [X] `10.13.2025` Add pause button
 - [X] `10.12.2025` Have timer show acutal break time when in break mode
 - [X] `10.12.2025` Add back button for both websites I own
