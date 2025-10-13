@@ -24,5 +24,11 @@ export class TimerService {
     this.isBreak.set(value);
   }
 
+  // Break active or inactive
+  readonly isPaused = signal(false);
+  updatePause(value: boolean) {
+    this.isPaused.set(value);
+  }
+
 }
 

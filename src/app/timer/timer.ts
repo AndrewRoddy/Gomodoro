@@ -17,8 +17,9 @@ export class Timer {
     // Sets seconds to the signal seconds
     private cSeconds = signal(this.timerService.seconds());
 
-    // Gets break mode dat
+    // Gets break and pause mode
     public cBreak = this.timerService.isBreak();
+    public cPause = this.timerService.isPaused();
     
     // Boolean toggle to show dashes or hide dashes
     private readonly showDashes = signal(false);
@@ -32,11 +33,15 @@ export class Timer {
             // Adds one per second
                         // Gets the break data
             this.cBreak = this.timerService.isBreak();
+            this.cPause = this.timerService.isPaused();
 
             // Adds or subtracts if on break
             let val = 0;
             if (!this.cBreak) val = 1;
             if (this.cBreak) val = -4;
+
+            // Allows pausing
+            if (this.cPause) val = 0;
 
             let newValue = this.cSeconds() + val;
 

@@ -1,14 +1,18 @@
 import { Component, signal } from '@angular/core';
+
+// Importing all components
 import { Timer } from './timer/timer';
 import { CircleFactory } from './circle-factory/circle-factory';
 import { ModeButton } from './mode-button/mode-button';
 import { Back } from './back/back';
+import { PauseButton } from './pause-button/pause-button';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Timer, CircleFactory, ModeButton, Back],
+  // Importing components into app.html
+  imports: [Timer, CircleFactory, ModeButton, Back, PauseButton],
   standalone: true
 })
 export class App {

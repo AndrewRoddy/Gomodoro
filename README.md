@@ -26,7 +26,6 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 
 ### To Do
 
-
 User setting imporovements
 - [ ] Create settings menu 
     - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
@@ -42,9 +41,15 @@ Patreon integrations
 - [ ] Create Patreon integration
 - [ ] Add visual skins with Patreon integration
 
+
 - [ ] **Move project to Ionic for Mobile**
+- [ ] Create image logo
+- [ ] Create text logo
+- [ ] Create app icon
+- [ ] Publish mobile app in beta
 
 - [ ] Create a coins mechanic
+- [ ] Add exp mechanic
 - [ ] Create some kind of pet system
     - [ ] Pets are gotten from a Crossy Road like Prize Machine
     - [ ] Include leveling up / evolving pets with "coins"
@@ -56,14 +61,21 @@ Patreon integrations
 - [ ] Create break time split algorithm 
     - Algorithm that automatically slowly decreases break time per hour worked (start 2:1 end at 5:1)
 
+- [ ] Create apple watch app (in a different repo)
+
 ### To Do : Complete
+- [X] `10.13.2025` Add pause button
 - [X] `10.12.2025` Have timer show acutal break time when in break mode
 - [X] `10.12.2025` Add back button for both websites I own
 - [X] `10.11.2025` Add break timer switch
-- [X] `10.10.2025` Make timer circle continue to circle around at one hour
-- [X] `10.10.2025` Create and link clock to timer
-- [X] `10.10.2025` Create timer that counts up
+- [X] `10.10.2025` Create new public repository
+- [X] `10.10.2025` Create concentric circle effect
+- [X] `10.10.2025` Create mode button
+- [X] `10.09.2025` Create timer circle visual
+- [X] `10.09.2025` Add ability to hide timer
+- [X] `10.09.2025` Create timer that counts up
 - [X] `10.09.2025` Create Angular Boiler Plate
+- [X] `10.08.2025` Create Repository
 
 ### Building
 ```

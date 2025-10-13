@@ -1,0 +1,6 @@
+<button
+    class="pauseButton"
+    [class.pause-mode]="cPause()"
+    (click)="togglePause()"
+> {{ cPause() ? 'End Pause' : 'Pause'}}
+</button>
