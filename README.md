@@ -25,9 +25,22 @@ In other apps like "FocusPomo", "Forest", and even "Focus Friend" they have a la
 Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed instead of stopping the focus session will immediately trigger break mode and start counting down. This will only occur if the user has specifically selected this feature to be turned on. Fully blocking apps will still be a feature but not be recommended.
 
 ### To Do
-- [ ] Make timer circle continue to circle around at one hour
-- [ ] Add break timer switch
+
+- [ ] Have timer show break time when in break mode
+- [ ] Add back button for both websites I own
+
+User setting imporovements
+- [ ] Create settings menu 
+    - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
+    - [ ] User can choose for it to show real time left or break time left
+- [ ] User can choose to have it show circles or not by clicking on them
+
+Improve user experience :)
+- [ ] Make break circles function with removing 
 - [ ] Store the users break data
+- [ ] Add notification that says your break time is up
+
+Patreon integrations
 - [ ] Create Patreon integration
 - [ ] Add visual skins with Patreon integration
 
@@ -40,12 +53,17 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
     - [ ] Include a shiny mechanic 1/8000 chance
 
 - [ ] **Full Mobile Release**
+- [ ] Create "live" lockscreen widget that shows current time working
+- [ ] Implement 3js as the timer
+- [ ] Create break time split algorithm 
+    - Algorithm that automatically slowly decreases break time per hour worked (start 2:1 end at 5:1)
 
 ### To Do : Complete
 - [X] Create Angular Boiler Plate
 - [X] Create timer that counts up
 - [X] Create and link clock to timer
-- [ ] Implement 3js as the timer
+- [X] Make timer circle continue to circle around at one hour
+- [X] Add break timer switch
 
 ### Building
 **Normally**
