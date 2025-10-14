@@ -2,5 +2,9 @@
     class="pauseButton"
     [class.pause-mode]="cPause()"
     (click)="togglePause()"
-> {{ cPause() ? 'Play' : 'Pause'}}
+>
+    <img *ngIf="cPause(); else showPause" src="/assets/Play.svg" alt="Play" />
+    <ng-template #showPause>
+        <img src="/assets/Pause.svg" alt="Pause" />
+    </ng-template>
 </button>

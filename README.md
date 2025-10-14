@@ -27,6 +27,7 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 ## To Do
 
 User setting imporovements
+- [ ] Fix bug of saving data also saves where the user was in their circle
 - [ ] Create settings menu 
     - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
     - [ ] User can choose for it to show real time left or break time left
@@ -62,6 +63,7 @@ Patreon integrations
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.13.2025` Custom pause and play SVG's instead of text
 - [X] `10.13.2025` Store the users break data
 - [X] `10.13.2025` Make break circles function with removing 
 - [X] `10.13.2025` Add pause button

@@ -1,10 +1,12 @@
 .pauseButton {
-  margin-left: 10px;
-  margin-right: 10px;
+  /* smaller left padding when NOT in pause mode */
+  padding: 0.8rem 1.1rem 0.8rem 1.3rem;
+  margin-left: 6px;
+  margin-right: 6px;
+
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
-  padding: 0.8rem 2rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
@@ -22,11 +24,21 @@
   }
 
   &.pause-mode {
+    /* larger left padding when in pause mode */
+  padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+
     background: linear-gradient(135deg, #625780, #625780);
     box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
 
     &:hover {
       box-shadow: 0 6px 14px rgba(46, 204, 113, 0.4);
     }
+  }
+
+  /* Make any icons inside the button smaller and vertically centered */
+  img {
+    width: 18px;
+    height: 20px;
+    vertical-align: middle;
   }
 }

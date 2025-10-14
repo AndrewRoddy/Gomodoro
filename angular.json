@@ -24,6 +24,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "Play.svg",
+                "input": "public/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "Pause.svg",
+                "input": "public/assets",
+                "output": "/assets"
               }
             ],
             "styles": [

@@ -1,9 +1,10 @@
 import { Component, inject, signal, effect } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TimerService } from '../timer-service';
 
 @Component({
   selector: 'app-pause-button',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pause-button.html',
   styleUrl: './pause-button.scss',
   standalone: true
