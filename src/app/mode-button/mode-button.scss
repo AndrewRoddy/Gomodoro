@@ -2,13 +2,16 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
   color: white;
   background: linear-gradient(135deg, #ff922f, #ff922f);
   transition: all 0.25s ease;
+
+  /* keep size consistent */
+  min-width: 5.3rem;
   
   &:hover {
       transform: translateY(-2px);
