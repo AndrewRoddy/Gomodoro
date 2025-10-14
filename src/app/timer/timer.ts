@@ -33,7 +33,7 @@ export class Timer {
         this.intervalId = setInterval(() => {
 
             // Adds one per second
-                        // Gets the break data
+            // Gets the break data
             this.cBreak = this.timerService.isBreak();
             this.cPause = this.timerService.isPaused();
 
