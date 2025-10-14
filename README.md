@@ -26,23 +26,27 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 
 ## To Do
 
+Important Bugs
+
+Improve user experience :)
+- [ ] User can choose to have it show circles or not by clicking on them
+- [ ] Add notification that says your break time is up
+- [ ] Create image logo (.favicon) (Probably a 3/4 complete circle)
+
 User setting imporovements
-- [ ] Fix bug of saving data also saves where the user was in their circle
 - [ ] Create settings menu 
     - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
     - [ ] User can choose for it to show real time left or break time left
-- [ ] User can choose to have it show circles or not by clicking on them
 
-Improve user experience :)
-- [ ] Add notification that says your break time is up
+Visual improvements
+- [ ] Have animation when you reload the page similair to how it loads on reload for the first few circles
 
-Patreon integrations
+Patreon integration
 - [ ] Create Patreon integration
 - [ ] Add visual skins with Patreon integration
 
 
 - [ ] **Move project to Ionic for Mobile**
-- [ ] Create image logo
 - [ ] Create text logo
 - [ ] Create app icon
 - [ ] Publish mobile app in beta
@@ -63,6 +67,7 @@ Patreon integrations
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.14.2025` Saving data also saves circles state
 - [X] `10.13.2025` Custom pause and play SVG's instead of text
 - [X] `10.13.2025` Store the users break data
 - [X] `10.13.2025` Make break circles function with removing 

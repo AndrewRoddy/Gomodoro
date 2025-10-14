@@ -62,48 +62,62 @@ export class CircleFactory {
     });
   };
   
-
+  
   // Updates the circles with secons being updated
   private updateCircles(): void {
     this.circles.update(circles => {
       
-      // Makes sure that we don't add a new circle
       if (circles.length === 0) return circles;
+      
+      // Puts all of the circles in circles array into updated
+      const updated = [...circles];
+      
+      // Expected number of circles
+      const targetCount = Math.floor(this.cSeconds / this.cTotal) + 1;
+      
+      if (updated.length < targetCount) {
+        while (updated.length < targetCount) {
+          
+          // Updates the first circle after it is re added by constructor
+          if (targetCount > 1) {
+            updated[0] = { ...updated[0], seconds: (this.cTotal) };
+          }
+
+          // Gets the last index in the circles array
+          const lastIndex = updated.length - 1; 
+          const last = updated[lastIndex]; // Puts the last circle into last
+
+          // circleSeconds is max unless last circle to be added
+          let circleSeconds = 0;
+          if (updated.length < targetCount-1) circleSeconds = this.cTotal;
+          else circleSeconds = this.cSeconds%this.cTotal;
+
+          // Adds a circle to the circle array
+          updated.push({
+            radius: last.radius * 0.81,
+            seconds: circleSeconds,
+            total: this.cTotal,
+            stroke: last.stroke * 0.79
+          });
+        }
+        // Returns updated to update circled before the following code us run
+        return updated;
+      }
 
       // Gets the last index in the circles array
       const lastIndex = circles.length - 1; 
+      const last = updated[lastIndex]; // Puts the last circle into last
 
-      // Puts all of the circles in circles array into updated
-      const updated = [...circles];
-
-      const last = updated[lastIndex]; // Puts the last circle into lat
-    
       // Updates the seconds of the last folder
       updated[lastIndex] = { ...last, seconds: (this.cSeconds%this.cTotal) };
-      
-      // Add a new circle when the last one completes
-      if (this.cSeconds >= last.total && (this.cSeconds % last.total === 0)) {
-
-        // Makes sure the last circle is full after editing it with push
-        updated[lastIndex] = { ...last, seconds: (this.cSeconds) };
-        
-        // Adds a circle to the circle array
-        updated.push({
-          radius: last.radius * 0.81,
-          seconds: 0,
-          total: this.cTotal,
-          stroke: last.stroke * 0.79
-        });
-      }
-
-      // Expected number of circles
-      const targetCount = Math.floor(this.cSeconds / this.cTotal) + 1;
+  
       
       // Removes a circle if there are too many
       if (updated.length > targetCount) {
         // remove extra circles from the end
         updated.splice(targetCount, updated.length - targetCount);
       }
+
       return updated;
 ;
     })
