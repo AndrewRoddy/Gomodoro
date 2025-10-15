@@ -27,6 +27,7 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 ## To Do
 
 Important Bugs
+- [ ] Fix bug where if the program loses focus it stops counting up (very bad)
 
 Improve user experience :)
 - [ ] User can choose to have it show circles or not by clicking on them
