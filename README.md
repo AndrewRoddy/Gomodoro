@@ -27,24 +27,37 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 ## To Do
 
 Improve user experience :)
-- [ ] Create image logo (.favicon) (Probably a 3/4 complete circle)
+- [ ] Create image favicon (Probably a orange 3/4 complete circle)
+- [ ] Create favicon for when pomodoro is paused (gray)
+- [ ] Create favicon for when in break mode (purple)
+- [ ] Show current amount of time in the heading bar
+    - [ ] When time on screen is hidden show "Gomodoro" in the title bar instead
 
 User setting imporovements
 - [ ] Create settings menu 
     - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
     - [ ] User can choose for it to show real time left or break time left
-
-Visual improvements
-- [ ] Have animation when you reload the page similair to how it loads on reload for the first few circles
+    - [ ] Add a Patreon button at the bottom of the user settings
 
 Patreon integration
 - [ ] Create Patreon integration
-- [ ] Add visual skins with Patreon integration
+- [ ] Add visual skins with Patreon integration (paid member)
+- [ ] Have it sync data from patreon account (free memberr)
+- [ ] Save paused, break mode, chosen color, patreon data all in the local memory
 
+--- Start advertising here ---
+
+Visual improvements
+- [ ] Have starting from zero circle animation on reload
+- [ ] Auto format everything to fit the window better
+    - [ ] When squishing up show the timer and circle very small
+    - [ ] Reformat page for when fully zoomed in / zoomed out
 
 - [ ] **Move project to Ionic for Mobile**
 - [ ] Create text logo
 - [ ] Create app icon
+- [ ] Fully rework desktop layout for mobile first
+    - Mobile should look exactly like desktop does in mobile mode
 - [ ] Publish mobile app in beta
 
 - [ ] Create a coins mechanic

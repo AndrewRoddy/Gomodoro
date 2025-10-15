@@ -68,7 +68,6 @@ export class CircleFactory {
   // Updates the circles with secons being updated
   private updateCircles(): void {
     this.circles.update(circles => {
-      console.log(this.showCircles());
       if (this.showCircles() === false) {
         // When circles are hidden, keep a single placeholder circle with 0 seconds
         return [{
