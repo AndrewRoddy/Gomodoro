@@ -20,6 +20,8 @@ export class Timer {
     // Gets break and pause mode
     public cBreak = this.timerService.isBreak();
     public cPause = this.timerService.isPaused();
+    // Tracks whether we've already shown the end-of-break notification
+    private breakNotified = false;
     
     // Boolean toggle to show dashes or hide dashes
     private readonly showDashes = signal(false);
@@ -31,13 +33,21 @@ export class Timer {
     private lastUpdate = Date.now();
     
     constructor() {
-        // Runs once per 10th of a second. 
-        // Timer will jump forward by the real elapsed time instead of falling behind.
+        // Ask for notification permission immediately
+        void this.requestNotificationPermission();
+
+        // Runs once per 10th of a second.  
+        // Timer jumps forward is out of focus
         this.intervalId = setInterval(() => {
 
             // Refresh break/pause flags from the service
             this.cBreak = this.timerService.isBreak();
             this.cPause = this.timerService.isPaused();
+
+            // Make sure we don't send two notifications
+            if (this.breakNotified && !this.cBreak) {
+                this.breakNotified = false;
+            }
 
             const now = Date.now();
             const elapsedMs = now - this.lastUpdate;
@@ -61,11 +71,50 @@ export class Timer {
                 this.cSeconds.set(newValue);
                 this.timerService.updateSeconds(newValue);
 
+                // Send notification if it makes sense
+                if (this.cBreak && this.cSeconds() === 0 && !this.breakNotified) {
+                    this.breakNotified = true;
+                    // Fire-and-forget the async permission + notification flow
+                    void this.notifyBreakEnd();
+                }
                 // Consume the elapsed time
                 this.lastUpdate = now;
             }
         }, 100); // Every 100ms (1/10th sec)
 
+    }
+
+    // Request permission to show notifications
+    private async requestNotificationPermission() {
+        if (typeof window === 'undefined') return;
+        const w = window as any;
+        if (!('Notification' in w)) return;
+        try {
+            if (w.Notification.permission === 'default') {
+                await w.Notification.requestPermission();
+            }
+        } catch {
+            // ignore
+        }
+    }
+
+    // Show notification when break ends
+    private async notifyBreakEnd() {
+        // Makes sure we are in the browser
+        if (typeof window === 'undefined') return;
+        const w = window as any;
+
+        // Checks if notifications are not supported
+        if (!('Notification' in w)) return; 
+
+        try {
+            // Sends notification
+            new w.Notification(
+                '🟠Break over',
+                { body: 'Get back to studying or whatever you were doing!' });
+        } catch (err) {
+            // Just ignore any notification errors they don't matter
+        }
     }
 
     // Clean up the interval when the component is destroyed

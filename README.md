@@ -27,7 +27,6 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 ## To Do
 
 Improve user experience :)
-- [ ] Add notification that says your break time is up
 - [ ] Create image logo (.favicon) (Probably a 3/4 complete circle)
 
 User setting imporovements
@@ -64,6 +63,7 @@ Patreon integration
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.15.2025` Add notification that says your break time is up
 - [X] `10.15.2025` User can choose to show or hide circles by clicking
 - [X] `10.15.2025` Fix bug where minimized window doesn't count time
 - [X] `10.14.2025` Saving data also saves circles state
