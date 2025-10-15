@@ -26,36 +26,51 @@ export class Timer {
 
     // Initializes the interval id that will be used to update every second
     private intervalId: any;
+
+    // The last time
+    private lastUpdate = Date.now();
     
     constructor() {
-        
-        // Runs once every minute
+        // Runs once per 10th of a second. 
+        // Timer will jump forward by the real elapsed time instead of falling behind.
         this.intervalId = setInterval(() => {
 
-            // Adds one per second
-            // Gets the break data
+            // Refresh break/pause flags from the service
             this.cBreak = this.timerService.isBreak();
             this.cPause = this.timerService.isPaused();
 
-            // Adds or subtracts if on break
-            let val = 0;
-            if (!this.cBreak) val = 1;
-            if (this.cBreak) val = -4;
+            const now = Date.now();
+            const elapsedMs = now - this.lastUpdate;
 
-            // Allows pausing
-            if (this.cPause) val = 0;
+            // Only update when at least one 1/10th of a second has passed to
+            // avoid excessive updates while still being responsive.
+            if (elapsedMs >= 100) {
+                const deltaSeconds = elapsedMs / 1000; // fractional seconds
 
-            let newValue = this.cSeconds() + val;
+                // Compute per-second delta according to existing logic
+                let perSecond = 0;
+                if (this.cPause) { perSecond = 0; } 
+                else { perSecond = this.cBreak ? -4 : 1; }
 
-            // Prevents negative numbers
-            if (newValue < 0) newValue = 0;
-            
-            // Adds or subtracts 1 second from cSeconds
-            this.cSeconds.set(newValue);
-            // Updates the timer service seconds
-            this.timerService.updateSeconds(newValue);
-        }, 1000); // Once per second
- 
+                let newValue = this.cSeconds() + (perSecond * deltaSeconds);
+
+                // Prevent negative numbers
+                if (newValue < 0) newValue = 0;
+
+                // Update the signal & service
+                this.cSeconds.set(newValue);
+                this.timerService.updateSeconds(newValue);
+
+                // Consume the elapsed time
+                this.lastUpdate = now;
+            }
+        }, 100); // Every 100ms (1/10th sec)
+
+    }
+
+    // Clean up the interval when the component is destroyed
+    ngOnDestroy(): void {
+        if (this.intervalId) clearInterval(this.intervalId);
     }
         
     // Formats the remaining number of seconds

@@ -27,7 +27,6 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 ## To Do
 
 Important Bugs
-- [ ] Fix bug where if the program loses focus it stops counting up (very bad)
 
 Improve user experience :)
 - [ ] User can choose to have it show circles or not by clicking on them
@@ -68,6 +67,7 @@ Patreon integration
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.15.2025` Fix bug where if the program loses focus it stops counting up
 - [X] `10.14.2025` Saving data also saves circles state
 - [X] `10.13.2025` Custom pause and play SVG's instead of text
 - [X] `10.13.2025` Store the users break data
