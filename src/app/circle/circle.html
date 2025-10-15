@@ -22,5 +22,15 @@
           [style.strokeDasharray]="circumference"
           [style.strokeDashoffset]="distance"
         />
+
+      <!-- Invisible but interactive area matching the circle interior so clicks inside the circle register -->
+       <!-- Remove circle-click-area to make only ring clickable -->
+        <circle
+          class="circle-click-area"
+          cx="128"
+          cy="128"
+          [attr.r]="radius"
+          fill="transparent"
+        />
       </svg>    
 </div>

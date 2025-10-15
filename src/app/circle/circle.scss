@@ -20,3 +20,22 @@
   stroke-linecap: round;
   transition: stroke-dashoffset 1s ease;
 }
+
+/* Make the container and svg pass-through for pointer events so only shapes receive clicks */
+.circle-container,
+.circle-progress {
+  pointer-events: none;
+}
+
+/* Enable pointer events on the visible circle elements and the transparent click area */
+.circle-bg,
+.circle-progress-bar,
+.circle-click-area {
+  pointer-events: auto;
+}
+
+/* Ensure the click-area is transparent but covers the interior of the circle */
+.circle-click-area {
+  opacity: 0; /* keep it invisible */
+  cursor: pointer;
+}

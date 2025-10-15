@@ -1,11 +1,10 @@
-<div class="circle-padding">
-    <ng-container *ngFor="let c of circles()">
-        <app-circle
+<div class="circle-padding" >
+    <ng-container *ngFor="let c of circles()" >
+        <app-circle class="circles" (click)="toggleCircles()"
         [radius]="c.radius"
         [seconds]="c.seconds"
         [total]="c.total"
         [stroke]="c.stroke">
-
-    </app-circle>
+        </app-circle>
     </ng-container>
 </div>
