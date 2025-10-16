@@ -6,13 +6,21 @@ import { CircleFactory } from './circle-factory/circle-factory';
 import { ModeButton } from './mode-button/mode-button';
 import { Back } from './back/back';
 import { PauseButton } from './pause-button/pause-button';
+import { SettingsButton } from './settings-button/settings-button';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
   // Importing components into app.html
-  imports: [Timer, CircleFactory, ModeButton, Back, PauseButton],
+  imports: [
+    Timer,
+    CircleFactory,
+    ModeButton,
+    Back,
+    PauseButton,
+    SettingsButton
+  ],
   standalone: true
 })
 export class App {

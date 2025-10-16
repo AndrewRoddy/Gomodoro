@@ -26,11 +26,6 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 
 ## To Do
 
-Improve window size
-- [ ] Auto format everything to fit the window better
-    - [ ] When squishing up show the timer and circle very small
-    - [ ] Reformat page for when fully zoomed in / zoomed out
-
 User setting imporovements
 - [ ] Create settings menu 
     - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
@@ -45,6 +40,10 @@ Improve user experience :)
 - [ ] Show current amount of time in the heading bar
     - [ ] When time on screen is hidden show "Gomodoro" in the title bar instead
 
+Improve window size
+- [ ] Auto format everything to fit the window better
+    - [ ] When squishing up show the timer and circle very small
+    - [ ] Reformat page for when fully zoomed in / zoomed out
 
 Patreon integration
 - [ ] Create Patreon integration

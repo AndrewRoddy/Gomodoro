@@ -1,12 +1,28 @@
 .header {
     display: flex;
-    // flex-direction: column;
+    /* place left and right groups on opposite sides */
+    justify-content: space-between;
     align-items: center;
-    // justify-content: center;
     height: 100%;
-    margin-left: 10px;
-    margin-right: 10px
+    width: 100%;
+    // padding-left: 10px;
+    // padding-right: 10px;
 }
+
+.left-header{
+    padding-left: 5px;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+}
+
+.right-header{
+    padding-right: 5px;
+    align-items: center;
+    justify-content: right;
+    display: flex;
+}
+
 
 .left-side {
     display: flex;

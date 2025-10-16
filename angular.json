@@ -25,13 +25,18 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              {
-                "glob": "Play.svg",
+              { 
+                "glob": "play.svg",
                 "input": "public/assets",
                 "output": "/assets"
               },
               {
-                "glob": "Pause.svg",
+                "glob": "pause.svg",
+                "input": "public/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "settings.svg",
                 "input": "public/assets",
                 "output": "/assets"
               }
