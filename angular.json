@@ -26,17 +26,17 @@
                 "input": "public"
               },
               { 
-                "glob": "play.svg",
+                "glob": "play-icon.svg",
                 "input": "public/assets",
                 "output": "/assets"
               },
               {
-                "glob": "pause.svg",
+                "glob": "pause-icon.svg",
                 "input": "public/assets",
                 "output": "/assets"
               },
               {
-                "glob": "settings.svg",
+                "glob": "settings-icon.svg",
                 "input": "public/assets",
                 "output": "/assets"
               }

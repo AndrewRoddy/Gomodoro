@@ -3,8 +3,8 @@
     [class.pause-mode]="cPause()"
     (click)="togglePause()"
 >
-    <img *ngIf="cPause(); else showPause" src="/assets/play.svg" alt="Play" />
+    <img *ngIf="cPause(); else showPause" src="/assets/play-icon.svg" alt="Play" />
     <ng-template #showPause>
-        <img src="/assets/pause.svg" alt="Pause" />
+        <img src="/assets/pause-icon.svg" alt="Pause" />
     </ng-template>
 </button>

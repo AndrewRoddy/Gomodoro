@@ -79,6 +79,8 @@ Animations
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.16.2025` Create settings button
+- [X] `10.16.2025` Add top header section
 - [X] `10.15.2025` Add notification that says your break time is up
 - [X] `10.15.2025` User can choose to show or hide circles by clicking
 - [X] `10.15.2025` Fix bug where minimized window doesn't count time
