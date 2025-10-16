@@ -26,6 +26,18 @@ Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed 
 
 ## To Do
 
+Improve window size
+- [ ] Auto format everything to fit the window better
+    - [ ] When squishing up show the timer and circle very small
+    - [ ] Reformat page for when fully zoomed in / zoomed out
+
+User setting imporovements
+- [ ] Create settings menu 
+    - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
+    - [ ] User can choose for it to show real time left or break time left
+    - [ ] Create light, dark, and midnight modes
+    - [ ] Add a Patreon button at the bottom of the user settings
+
 Improve user experience :)
 - [ ] Create image favicon (Probably a orange 3/4 complete circle)
 - [ ] Create favicon for when pomodoro is paused (gray)
@@ -33,11 +45,6 @@ Improve user experience :)
 - [ ] Show current amount of time in the heading bar
     - [ ] When time on screen is hidden show "Gomodoro" in the title bar instead
 
-User setting imporovements
-- [ ] Create settings menu 
-    - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
-    - [ ] User can choose for it to show real time left or break time left
-    - [ ] Add a Patreon button at the bottom of the user settings
 
 Patreon integration
 - [ ] Create Patreon integration
@@ -47,11 +54,8 @@ Patreon integration
 
 --- Start advertising here ---
 
-Visual improvements
+Animations
 - [ ] Have starting from zero circle animation on reload
-- [ ] Auto format everything to fit the window better
-    - [ ] When squishing up show the timer and circle very small
-    - [ ] Reformat page for when fully zoomed in / zoomed out
 
 - [ ] **Move project to Ionic for Mobile**
 - [ ] Create text logo
