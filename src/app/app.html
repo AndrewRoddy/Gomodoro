@@ -1,34 +1,23 @@
 
 <div class="header">
-  <!-- <app-back></app-back> -->
+  <app-back></app-back>
   <h1>Gomodoro</h1>
-  <p>The better pomodoro</p>
+  <!-- <app-back></app-back> -->
+  <!-- <p>The better pomodoro</p> -->
+</div>
+<div class="divider" role="separator" aria-label="Divider">
 </div>
 
 <main class="main">
   <div class="content">
     <div class="left-side">
-      <app-timer></app-timer>
-      
-      <!-- Circles --> 
-      <app-circle-factory></app-circle-factory>
-      
-      <div>
-        
-        <!-- Back Button --> 
-        <app-back></app-back>
+      <!-- Timer --> <app-timer/>
+      <!-- Circles --> <app-circle-factory/>
 
-        <!-- Pause Button -->
-        <app-pause-button></app-pause-button>
-        
-        <!-- Break Button --> 
-        <app-mode-button></app-mode-button>
-        
+      <div> <!-- Buttons -->
+        <!-- Pause Button --> <app-pause-button/>
+        <!-- Break Button --> <app-mode-button/>
       </div>
     </div>
-    <!-- <div class="divider" role="separator" aria-label="Divider">
-    </div> -->
-    <!-- <div class="right-side">
-    </div> -->
   </div>
 </main>
