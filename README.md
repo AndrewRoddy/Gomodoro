@@ -34,7 +34,6 @@ User setting imporovements
     - [ ] Add a Patreon button at the bottom of the user settings
 
 Improve user experience :)
-- [ ] Create image favicon (Probably a orange 3/4 complete circle)
 - [ ] Create favicon for when pomodoro is paused (gray)
 - [ ] Create favicon for when in break mode (purple)
 - [ ] Show current amount of time in the heading bar
@@ -79,6 +78,7 @@ Animations
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.17.2025` Create image favicon (Probably a 3/4 complete circle)
 - [X] `10.16.2025` Create settings button
 - [X] `10.16.2025` Add top header section
 - [X] `10.15.2025` Add notification that says your break time is up
