@@ -7,17 +7,17 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/assets/logo/SVG/favicon-128.png",
+      "src": "/assets/favicon-128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/assets/logo/SVG/favicon-192.png",
+      "src": "/assets/favicon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/logo/SVG/favicon-512.png",
+      "src": "/assets/favicon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
