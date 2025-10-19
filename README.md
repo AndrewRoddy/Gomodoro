@@ -78,6 +78,7 @@ Animations
 - [ ] Create apple watch app (in a different repo)
 
 ### To Do : Complete
+- [X] `10.19.2025` Added progressive web app icon
 - [X] `10.17.2025` Create image favicon (Probably a 3/4 complete circle)
 - [X] `10.16.2025` Create settings button
 - [X] `10.16.2025` Add top header section
