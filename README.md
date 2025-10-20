@@ -24,14 +24,12 @@ In other apps like "FocusPomo", "Forest", and even "Focus Friend" they have a la
 
 Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed instead of stopping the focus session will immediately trigger break mode and start counting down. This will only occur if the user has specifically selected this feature to be turned on. Fully blocking apps will still be a feature but not be recommended.
 
+### Building
+```
+npm i
+ng serve
+```
 ## To Do
-
-User setting imporovements
-- [ ] Create settings menu 
-    - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
-    - [ ] User can choose for it to show real time left or break time left
-    - [ ] Create light, dark, and midnight modes
-    - [ ] Add a Patreon button at the bottom of the user settings
 
 Improve user experience :)
 - [ ] Create favicon for when pomodoro is paused (gray)
@@ -39,10 +37,19 @@ Improve user experience :)
 - [ ] Show current amount of time in the heading bar
     - [ ] When time on screen is hidden show "Gomodoro" in the title bar instead
 
+
+User setting imporovements
+- [ ] Create settings menu 
+    - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
+    - [ ] Create light, dark, and midnight modes
+    - [ ] Add a Patreon button at the bottom of the user settings
+
+
 Improve window size
 - [ ] Auto format everything to fit the window better
     - [ ] When squishing up show the timer and circle very small
     - [ ] Reformat page for when fully zoomed in / zoomed out
+
 
 Patreon integration
 - [ ] Create Patreon integration
@@ -50,32 +57,21 @@ Patreon integration
 - [ ] Have it sync data from patreon account (free memberr)
 - [ ] Save paused, break mode, chosen color, patreon data all in the local memory
 
---- Start advertising here ---
-
 Animations
-- [ ] Have starting from zero circle animation on reload
+- [ ] Have starting from zero circle animation on reload / initial load
 
 - [ ] **Move project to Ionic for Mobile**
 - [ ] Create text logo
-- [ ] Create app icon
+- [X] Create app icon
 - [ ] Fully rework desktop layout for mobile first
     - Mobile should look exactly like desktop does in mobile mode
 - [ ] Publish mobile app in beta
 
-- [ ] Create a coins mechanic
-- [ ] Add exp mechanic
-- [ ] Create some kind of pet system
-    - [ ] Pets are gotten from a Crossy Road like Prize Machine
-    - [ ] Include leveling up / evolving pets with "coins"
-    - [ ] Include a shiny mechanic 1/8000 chance
-
-- [ ] **Full Mobile Release**
+- [ ] **Mobile Release**
 - [ ] Create "live" lockscreen widget that shows current time working
-- [ ] Implement 3js as the timer
-- [ ] Create break time split algorithm 
-    - Algorithm that automatically slowly decreases break time per hour worked (start 2:1 end at 5:1)
-
-- [ ] Create apple watch app (in a different repo)
+- [ ] Create dynamic island integration
+- [ ] Every 6 hours send notification asking if the user is still there.
+    - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
 - [X] `10.19.2025` Added dark mode and light mode iOS Support
@@ -103,8 +99,14 @@ Animations
 - [X] `10.09.2025` Create Angular Boiler Plate
 - [X] `10.08.2025` Create Repository
 
-### Building
-```
-npm i
-ng serve
-```
+### Unimportant Features
+- [ ] Implement 3js as the timer
+- [ ] Create apple watch app (in a different repo)
+- [ ] Create break time split algorithm 
+    - Algorithm that automatically slowly decreases break time per hour worked (start 2:1 end at 5:1)
+- [ ] Create a coins mechanic
+- [ ] Add exp mechanic
+- [ ] Create some kind of pet system
+    - [ ] Pets are gotten from a Crossy Road like Prize Machine
+    - [ ] Include leveling up / evolving pets with "coins"
+    - [ ] Include a shiny mechanic 1/8000 chance
