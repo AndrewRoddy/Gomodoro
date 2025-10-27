@@ -39,9 +39,6 @@ ng serve
 
 ## To Do
 
-Improve user experience :)
-- [ ] Show current amount of time in the heading bar
-    - [ ] When time on screen is hidden show "Gomodoro" in the title bar instead
 
 User setting imporovements
 
@@ -85,6 +82,8 @@ Animations
 
 ### To Do : Complete
 
+- [X] `10.27.2025` When time on screen is hidden show "Gomodoro" in the title bar
+- [X] `10.27.2025` Show current amount of time in the title bar
 - [X] `10.27.2025` Creates red icon when out of time
 - [X] `10.27.2025` Break button color changes with pause button
 - [X] `10.27.2025` Create favicon for when pomodoro is paused (gray)

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from "@angular/core";
+import { Title } from '@angular/platform-browser';
 import { TimerService } from "../timer-service"
 
 @Component({
@@ -13,6 +14,7 @@ export class Timer {
 
     // Allows getting variables from timerService that can be updated
     private timerService = inject(TimerService);
+    private titleService = inject(Title);
 
     // Sets seconds to the signal seconds
     private cSeconds = signal(this.timerService.seconds());
@@ -39,10 +41,19 @@ export class Timer {
         // Runs once per 10th of a second.
         // Timer jumps forward is out of focus
         this.intervalId = setInterval(() => {
-
+            
             // Refresh break/pause flags from the service
             this.cBreak = this.timerService.isBreak();
             this.cPause = this.timerService.isPaused();
+            
+            // Sets the title to the seconds
+            if (this.showDashes() || this.cSeconds() <= 0) {
+                // if timer hidden show Gomodoro
+                this.titleService.setTitle("Gomodoro");
+            } else {
+                // Shows seconds
+                this.titleService.setTitle(this.formattedRemaining());
+            }
 
             // Make sure we don't send two notifications
             if (this.breakNotified && !this.cBreak) {
