@@ -29,22 +29,23 @@
 
   &.break-mode {
 
-    &.pause-mode {
-      background: #BBBBBB;
-    }
-      
-      // // Shadow in break and pause mode
-      // &:hover {
-      //   box-shadow: 0 6px 14px #bbbbbb7a;
-      // }
-
     // C - Color
     // O - Opacity
     // #CCCCCCOO
     background: #625780;
+    
     // Shadow while only break mode
     &:hover {
       box-shadow: 0 6px 14px #62578066;
+    }
+  }
+
+  // If in pause mode no matter break or not
+  &.pause-mode {
+    background: #BBBBBB;
+    
+    &:hover {
+      box-shadow: 0 6px 14px #bbbbbb7a;
     }
   }
 }

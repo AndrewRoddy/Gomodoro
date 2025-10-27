@@ -24,12 +24,18 @@ export class FaviconManager {
       return;
     }
 
-    let faviconPath: string;
+    let faviconPath: string = 'favicon.ico';
 
     // Priority: paused > break > default
-    if (this.timerService.isPaused())     { faviconPath = 'gray-favicon.ico';   } 
-    else if (this.timerService.isBreak()) { faviconPath = 'purple-favicon.ico'; } 
-    else                                  { faviconPath = 'orange-favicon.ico'; }
+    if (
+      (this.timerService.isBreak()) &&
+      (!this.timerService.isPaused()) &&
+      (this.timerService.seconds() <= 0)) {
+      faviconPath = 'red-favicon.ico';
+    } 
+    else if (this.timerService.isPaused()) { faviconPath = 'gray-favicon.ico';   } 
+    else if (this.timerService.isBreak())  { faviconPath = 'purple-favicon.ico'; } 
+    else                                   { faviconPath = 'orange-favicon.ico'; }
 
     // Find existing favicon link element
     let link = document.querySelector("link[rel*='icon']") as HTMLLinkElement;
