@@ -85,6 +85,7 @@ Animations
 
 ### To Do : Complete
 
+- [X] `10.27.2025` Break button color changes with pause button
 - [X] `10.27.2025` Create favicon for when pomodoro is paused (gray)
 - [X] `10.27.2025` Create favicon for when in break mode (purple)
 - [x] `10.19.2025` Added dark mode and light mode iOS Support

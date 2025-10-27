@@ -1,6 +1,7 @@
 <button
     class="mode"
     [class.break-mode]="cBreak()"
+    [class.pause-mode]="cPause()"
     (click)="toggleMode()"
 > {{ cBreak() ? 'Work' : 'Break'}}
 </button>
