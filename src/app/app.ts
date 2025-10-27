@@ -7,6 +7,7 @@ import { ModeButton } from './mode-button/mode-button';
 import { Back } from './back/back';
 import { PauseButton } from './pause-button/pause-button';
 import { SettingsButton } from './settings-button/settings-button';
+import { FaviconManager } from './favicon-manager/favicon-manager';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,9 @@ import { SettingsButton } from './settings-button/settings-button';
     Timer,
     CircleFactory,
     ModeButton,
-    Back,
     PauseButton,
-    SettingsButton
+    SettingsButton,
+    FaviconManager
   ],
   standalone: true
 })

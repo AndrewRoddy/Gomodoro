@@ -22,7 +22,7 @@ export class Timer {
     public cPause = this.timerService.isPaused();
     // Tracks whether we've already shown the end-of-break notification
     private breakNotified = false;
-    
+
     // Boolean toggle to show dashes or hide dashes
     private readonly showDashes = signal(false);
 
@@ -31,12 +31,12 @@ export class Timer {
 
     // The last time
     private lastUpdate = Date.now();
-    
+
     constructor() {
         // Ask for notification permission immediately
         void this.requestNotificationPermission();
 
-        // Runs once per 10th of a second.  
+        // Runs once per 10th of a second.
         // Timer jumps forward is out of focus
         this.intervalId = setInterval(() => {
 
@@ -59,7 +59,7 @@ export class Timer {
 
                 // Compute per-second delta according to existing logic
                 let perSecond = 0;
-                if (this.cPause) { perSecond = 0; } 
+                if (this.cPause) { perSecond = 0; }
                 else { perSecond = this.cBreak ? -4 : 1; }
 
                 let newValue = this.cSeconds() + (perSecond * deltaSeconds);
@@ -105,7 +105,7 @@ export class Timer {
         const w = window as any;
 
         // Checks if notifications are not supported
-        if (!('Notification' in w)) return; 
+        if (!('Notification' in w)) return;
 
         try {
             // Sends notification
@@ -121,7 +121,7 @@ export class Timer {
     ngOnDestroy(): void {
         if (this.intervalId) clearInterval(this.intervalId);
     }
-        
+
     // Formats the remaining number of seconds
     readonly formattedRemaining = computed(() => {
         let sec = this.cSeconds();
@@ -130,12 +130,12 @@ export class Timer {
         if (this.showDashes()) return '--:--';
         return this.formattedTime(sec);
     });
-    
+
     // Allows the user to click on the time to edit the dashes
     toggleDashes() {
         this.showDashes.update(v => !v);
     }
-        
+
     // Formats the time to only show minutes
     private formattedTime(totalSeconds: number) {
         let date: string = new Date(totalSeconds * 1000).toISOString();
