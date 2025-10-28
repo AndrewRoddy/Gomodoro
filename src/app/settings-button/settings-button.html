@@ -1,3 +1,13 @@
-<button class="settingsButton" type="button">
-	<img src="/assets/settings-icon.svg" alt="Pause" />
+<button class="settingsButton" type="button" (click)="openModal()">
+	<img src="/assets/settings-icon.svg" alt="Settings" />
 </button>
+
+<!-- Modal -->
+@if (isModalOpen()) {
+  <div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <app-settings-modal/>
+      <button class="close-button" (click)="closeModal()">×</button>
+    </div>
+  </div>
+}

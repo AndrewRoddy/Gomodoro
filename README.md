@@ -46,9 +46,13 @@ User setting imporovements
     - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
     - [ ] Create light, dark, and midnight modes
     - [ ] Add a Patreon button at the bottom of the user settings
-    - [ ] Add reset time button
+    
     - [ ] Add add time button
     - [ ] Add "total time focused" time at bottom of settings
+
+Icons
+
+- [ ] Fix icons not appearing in obsidian.md
 
 Improve window size
 
@@ -81,7 +85,7 @@ Animations
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
-
+- [X] `10.28.2025` Add reset time button
 - [X] `10.27.2025` When time on screen is hidden show "Gomodoro" in the title bar
 - [X] `10.27.2025` Show current amount of time in the title bar
 - [X] `10.27.2025` Creates red icon when out of time

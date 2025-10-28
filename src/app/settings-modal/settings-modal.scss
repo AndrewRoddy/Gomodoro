@@ -1,0 +1,123 @@
+.settings-modal {
+  font-family: 'Poppins', sans-serif;
+
+  h2 {
+    margin: 0 0 2rem 0;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+
+    .setting-info {
+      flex: 1;
+
+      h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  // Toggle Switch Styles
+  .toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    background: #BBBBBB;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.active {
+      background: #ff922f;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 26px;
+      height: 26px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    &.active .toggle-slider {
+      transform: translateX(28px);
+    }
+  }
+
+  // Reset Button Styles
+  .reset-button {
+    padding: 0.6rem 1.5rem;
+    background: #ff922f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+
+    &:hover {
+      background: #ff8020;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 146, 47, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+    // Bad thing
+    .bad {
+        background: #ff4949;
+        &:hover {
+            background: #ff3131;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px #ff31314d;
+        }
+    }
+}
+

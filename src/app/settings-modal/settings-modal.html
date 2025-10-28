@@ -1,0 +1,35 @@
+<div class="settings-modal">
+  <h2>Settings</h2>
+  <div class="settings-content">
+    
+    <!-- Notifications Setting -->
+    <div class="setting-item">
+      <div class="setting-info">
+        <h3>Notifications</h3>
+        <p>Show browser notifications when timer ends</p>
+      </div>
+      <button 
+        class="toggle-switch" 
+        [class.active]="notifications()"
+        (click)="toggleNotifications()"
+        type="button">
+        <span class="toggle-slider"></span>
+      </button>
+    </div>
+
+    <!-- Reset Timer Button -->
+    <div class="setting-item">
+      <div class="setting-info">
+        <h3>Reset Timer</h3>
+        <p>Reset the timer to default value</p>
+      </div>
+      <button 
+        class="reset-button bad" 
+        (click)="resetTimer()"
+        type="button">
+        Reset
+      </button>
+    </div>
+
+  </div>
+</div>

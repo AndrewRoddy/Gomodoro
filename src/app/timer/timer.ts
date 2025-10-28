@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from "@angular/core";
 import { Title } from '@angular/platform-browser';
-import { TimerService } from "../timer-service"
+import { TimerService } from "../timer-service";
 
 @Component({
     selector: 'app-timer',
@@ -37,6 +37,16 @@ export class Timer {
     constructor() {
         // Ask for notification permission immediately
         void this.requestNotificationPermission();
+
+        // Sync with timer service when it changes externally
+        effect(() => {
+            const serviceSeconds = this.timerService.seconds();
+            // Only update if there's a significant difference (external update like reset)
+            if (Math.abs(serviceSeconds - this.cSeconds()) > 1) {
+                this.cSeconds.set(serviceSeconds);
+                this.lastUpdate = Date.now();
+            }
+        });
 
         // Runs once per 10th of a second.
         // Timer jumps forward is out of focus
