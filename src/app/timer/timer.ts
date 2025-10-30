@@ -18,6 +18,7 @@ export class Timer {
 
     // Sets seconds to the signal seconds
     private cSeconds = signal(this.timerService.seconds());
+    public cRatio = signal(this.timerService.ratio());
 
     // Gets break and pause mode
     public cBreak = this.timerService.isBreak();
@@ -46,6 +47,9 @@ export class Timer {
                 this.cSeconds.set(serviceSeconds);
                 this.lastUpdate = Date.now();
             }
+        
+            const serviceRatio = this.timerService.ratio();
+            this.cRatio.set(serviceRatio);
         });
 
         // Runs once per 10th of a second.
@@ -81,8 +85,11 @@ export class Timer {
                 // Compute per-second delta according to existing logic
                 let perSecond = 0;
                 if (this.cPause) { perSecond = 0; }
-                else { perSecond = this.cBreak ? -4 : 1; }
-
+                else { 
+                    // If in break mode uses the break to get the ratio
+                    if (this.cBreak){ perSecond = (-1 * this.cRatio()); } 
+                    else {  perSecond = 1;  }
+                }
                 let newValue = this.cSeconds() + (perSecond * deltaSeconds);
 
                 // Prevent negative numbers
@@ -146,7 +153,7 @@ export class Timer {
     // Formats the remaining number of seconds
     readonly formattedRemaining = computed(() => {
         let sec = this.cSeconds();
-        if (this.cBreak) sec = Math.ceil(sec/4);
+        if (this.cBreak) sec = Math.ceil(sec/this.cRatio());
 
         if (this.showDashes()) return '--:--';
         return this.formattedTime(sec);

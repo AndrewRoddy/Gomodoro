@@ -4,55 +4,64 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class TimerService {
- 
-  // Seconds
-  //
+
+
   constructor() {
 
     // Checks if we are in a browser and able to access local storage or not
     if (typeof window !== 'undefined' && window.localStorage) {
 
+      // Saved //
       // Load saved seconds from localStorage
       const savedSeconds = localStorage.getItem('seconds');
-
-      // Only gets it if its already there
-      if (savedSeconds !== null) {
+      if (savedSeconds !== null) { // Only gets it if its already there
         this.seconds.set(parseInt(savedSeconds, 10));
+      }
+
+      // Ratio //
+      // Load saved ratio from localStorage (work:break ratio)
+      const savedRatio = localStorage.getItem('ratio');
+      if (savedRatio !== null) {
+        this.ratio.set(parseInt(savedRatio, 10));
       }
     }
   }
 
+  // Seconds
   readonly seconds = signal(0);
-  updateSeconds(value: number) {
-    this.seconds.set(value);
+  updateSeconds(value: number) { this.seconds.set(value);
 
-    // Makes sure we are in a browser before tryinig to save seconds
+    // Makes sure we are in a browser before trying to save seconds
     if (typeof window !== 'undefined' && window.localStorage) {
-      // Save to localStorage whenever it updates
-      localStorage.setItem('seconds', value.toString());
+      // Round the seconds before storing them
+      const rounded = Math.round(value);
+      // Save rounded value to localStorage whenever it updates
+      localStorage.setItem('seconds', rounded.toString());
     }
   }
 
-  // Minutes // 1 hour 60s*60m
-  //
+  // Ratio // X:1 X minutes of work vs break
+  readonly ratio = signal(4);
+  updateRatio(value: number) { this.ratio.set(value);
+
+    // Makes sure we are in a browser before trying to save the ratio
+    if (typeof window !== 'undefined' && window.localStorage) {
+      // Save rounded value to localStorage whenever it updates
+      localStorage.setItem('ratio', value.toString());
+    }
+  }
+
+  // Total seconds per circle // 1 hour 60s*60m
   readonly total = signal(60*60);
-  updateTotal(value: number) {
-    this.total.set(value);
-  }
+  updateTotal(value: number) { this.total.set(value); }
 
   // Break active or inactive
-  //
   readonly isBreak = signal(false);
-  updateBreak(value: boolean) {
-    this.isBreak.set(value);
-  }
+  updateBreak(value: boolean) { this.isBreak.set(value); }
 
-  // Break active or inactive
-  //
+  // Paused or not paused
   readonly isPaused = signal(false);
-  updatePause(value: boolean) {
-    this.isPaused.set(value);
-  }
+  updatePause(value: boolean) { this.isPaused.set(value); }
 
 }
 

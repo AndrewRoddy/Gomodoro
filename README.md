@@ -39,29 +39,24 @@ ng serve
 
 ## To Do
 
-
 User setting imporovements
-
 - [ ] Create settings menu 
-    - [ ] User can change break time split (2:1, 3:1, 4:1, 5:1)
     - [ ] Create light, dark, and midnight modes
     - [ ] Add a Patreon button at the bottom of the user settings
-    
     - [ ] Add add time button
     - [ ] Add "total time focused" time at bottom of settings
+    
+- [ ] Make sure the seconds can never go over max integer size
 
 Icons
-
 - [ ] Fix icons not appearing in obsidian.md
 
 Improve window size
-
 - [ ] Auto format everything to fit the window better
     - [ ] When squishing up show the timer and circle very small
     - [ ] Reformat page for when fully zoomed in / zoomed out
 
 Patreon integration
-
 - [ ] Create Patreon integration
 - [ ] Add visual skins with Patreon integration (paid member)
 - [ ] Have it sync data from patreon account (free memberr)
@@ -70,6 +65,8 @@ Patreon integration
 Animations
 
 - [ ] Have starting from zero circle animation on reload / initial load
+
+Start recording
 - [ ] **Move project to Ionic for Mobile**
 - [ ] Create text logo
 - [x] Create app icon
@@ -85,6 +82,7 @@ Animations
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `10.30.2025` User can change break time split (2:1, 3:1, 4:1, 5:1)
 - [X] `10.28.2025` Add reset time button
 - [X] `10.27.2025` When time on screen is hidden show "Gomodoro" in the title bar
 - [X] `10.27.2025` Show current amount of time in the title bar

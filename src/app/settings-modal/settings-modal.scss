@@ -110,6 +110,40 @@
     }
   }
 
+  // Ratio segmented control
+  .ratio-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    flex-shrink: 0;
+
+    .ratio-option {
+      padding: 0.45rem 0.65rem;
+      background: transparent;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      color: #333;
+      min-width: 44px;
+      text-align: center;
+      transition: all 0.18s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      }
+
+      &.active {
+        background: #ff922f;
+        border-color: #ff922f;
+        color: #fff;
+        box-shadow: 0 6px 12px rgba(255,146,47,0.18);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
     // Bad thing
     .bad {
         background: #ff4949;
@@ -119,5 +153,5 @@
             box-shadow: 0 4px 8px #ff31314d;
         }
     }
+    
 }
-
