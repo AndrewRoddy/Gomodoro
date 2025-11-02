@@ -1,6 +1,7 @@
 # Gomodoro
 
 Pomodoro timer using the flowtime technique to automatically calculate break times.
+Written in angular using html, scss, and typescript.
 
 ## Thesis
 
@@ -43,8 +44,13 @@ User setting imporovements
 - [ ] Create settings menu 
     - [ ] Create light, dark, and midnight modes
     - [ ] Add a Patreon button at the bottom of the user settings
-    - [ ] Add add time button
+
     - [ ] Add "total time focused" time at bottom of settings
+    - [ ] Add ability to reset back to time when last closed
+      - Add saving previous time to local storage
+      - Should save when it runs the "reopen" thing
+    - [ ] Add subtract 15 minutes button
+    - [ ] Remove clicking on circles to hide, move to settings menu
     
 - [ ] Make sure the seconds can never go over max integer size
 
@@ -69,7 +75,7 @@ Animations
 Start recording
 - [ ] **Move project to Ionic for Mobile**
 - [ ] Create text logo
-- [x] Create app icon
+- [X] Create app icon
 - [ ] Fully rework desktop layout for mobile first
 
   - Mobile should look exactly like desktop does in mobile mode
