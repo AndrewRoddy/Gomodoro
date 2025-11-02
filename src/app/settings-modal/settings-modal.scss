@@ -85,7 +85,7 @@
   }
 
   // Reset Button Styles
-  .reset-button {
+  .button {
     padding: 0.6rem 1.5rem;
     background: #ff922f;
     color: white;
@@ -151,6 +151,17 @@
             background: #ff3131;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px #ff31314d;
+        }
+    }
+
+    // Patreon thing
+    .patreon {
+        padding: 0.6rem 1.0rem;
+        background: #000000;
+        &:hover {
+            background: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px #3333334d;
         }
     }
     
