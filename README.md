@@ -40,7 +40,18 @@ ng serve
 
 ## To Do
 
+
+Build Backend
+
+- [ ] Create backend boiler plate backend (Flask)
+
+- [ ] Set up render backend for the API calls
+- [ ] Check if the user has paid
+- [ ] Connect it to Supabase
+
+
 Patreon integration
+
 - [ ] Show username when signed in with patreon
 - [ ] Store if user is paying or not paying
 - [ ] Use Supabase database to store seconds user currently has every 30 seconds
@@ -48,13 +59,17 @@ Patreon integration
 - [ ] Create selector to choose the most up to date time for the user
 - [ ] Have it sync data from patreon account (paid member)
 
+
 Patreon Skins
+
 - [ ] Create patreon timer skins (background, timer, text, etc)
 - [ ] Create modal to select theme the user wants to use
 - [ ] Add visual skins with Patreon integration (paid member)
 - [ ] Save paused, break mode, chosen color, patreon data all in the local memory
 
+
 User setting imporovements
+
 - [ ] Create settings menu 
     - [ ] Create light, dark, and midnight modes
 
