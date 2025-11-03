@@ -40,10 +40,23 @@ ng serve
 
 ## To Do
 
+Patreon integration
+- [ ] Show username when signed in with patreon
+- [ ] Store if user is paying or not paying
+- [ ] Use Supabase database to store seconds user currently has every 30 seconds
+- [ ] Create Patreon integration to fetch that data
+- [ ] Create selector to choose the most up to date time for the user
+- [ ] Have it sync data from patreon account (paid member)
+
+Patreon Skins
+- [ ] Create patreon timer skins (background, timer, text, etc)
+- [ ] Create modal to select theme the user wants to use
+- [ ] Add visual skins with Patreon integration (paid member)
+- [ ] Save paused, break mode, chosen color, patreon data all in the local memory
+
 User setting imporovements
 - [ ] Create settings menu 
     - [ ] Create light, dark, and midnight modes
-    - [ ] Add a Patreon button at the bottom of the user settings
 
     - [ ] Add "total time focused" time at bottom of settings
     - [ ] Add ability to reset back to time when last closed
@@ -62,12 +75,6 @@ Improve window size
     - [ ] When squishing up show the timer and circle very small
     - [ ] Reformat page for when fully zoomed in / zoomed out
 
-Patreon integration
-- [ ] Create Patreon integration
-- [ ] Add visual skins with Patreon integration (paid member)
-- [ ] Have it sync data from patreon account (free memberr)
-- [ ] Save paused, break mode, chosen color, patreon data all in the local memory
-
 Animations
 
 - [ ] Have starting from zero circle animation on reload / initial load
@@ -75,7 +82,7 @@ Animations
 Start recording
 - [ ] **Move project to Ionic for Mobile**
 - [ ] Create text logo
-- [X] Create app icon
+- [ ] Create app icon
 - [ ] Fully rework desktop layout for mobile first
 
   - Mobile should look exactly like desktop does in mobile mode
@@ -88,6 +95,7 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.03.2025` Add a Patreon button at the top of user settings
 - [X] `10.30.2025` User can change break time split (2:1, 3:1, 4:1, 5:1)
 - [X] `10.28.2025` Add reset time button
 - [X] `10.27.2025` When time on screen is hidden show "Gomodoro" in the title bar
