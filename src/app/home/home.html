@@ -1,0 +1,34 @@
+
+<!-- Favicon manager -->
+<app-favicon-manager/>
+
+<!-- The top bar -->
+<div class="header">
+  <!-- left side -->
+  <div class="left-header">
+    <!-- <app-back/> -->
+    <h1>Gomodoro</h1>
+  </div>
+  <!-- right header -->
+  <div class="right-header">
+    <app-settings-button/>
+  </div>
+
+</div>
+
+<!-- The divider in the center -->
+<div class="divider" role="separator" aria-label="Divider"></div>
+
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <!-- Timer --> <app-timer/>
+      <!-- Circles --> <app-circle-factory/>
+
+      <div> <!-- Buttons -->
+        <!-- Pause Button --> <app-pause-button/>
+        <!-- Break Button --> <app-mode-button/>
+      </div>
+    </div>
+  </div>
+</main>

@@ -32,7 +32,6 @@ export class SettingsModal {
     this.timerService.updateSeconds(0);
   }
 
-
   signInWithPatreon() {
     const clientId = 'xQeaKLua6MiZLsGQPTHFqRdPji9OBmruyxxrd34eSgxFLljMr2ujADK31gmMJ_kp';
     const redirectUri = encodeURIComponent('https://gomodoro.drewgo.com/patreon/callback');
