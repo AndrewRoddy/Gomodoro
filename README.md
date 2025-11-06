@@ -54,7 +54,7 @@ User setting imporovements
     
 Build Backend
 
-- [ ] Create backend boiler plate backend (Flask)
+- [ ] Create backend boiler plate backend .NET
 
 - [ ] Set up render backend for the API calls
 - [ ] Check if the user has paid
