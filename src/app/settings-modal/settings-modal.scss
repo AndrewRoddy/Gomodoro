@@ -30,7 +30,7 @@
     }
 
     .setting-info {
-      flex: 1;
+      flex: 1 1 50%;
 
       h3 {
         color: $text-black;
@@ -115,9 +115,11 @@
   // Ratio segmented control
   .ratio-toggle {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-left: 1rem;
-    flex-shrink: 0;
+    flex: 1 1 50%;
+    max-width: 50%;
 
     .ratio-option {
       border: 1px solid $border-gray;
@@ -130,6 +132,7 @@
       min-width: 44px;
       text-align: center;
       transition: all 0.18s ease;
+      flex: 1 1 auto;
 
       &:hover {
         transform: translateY(-2px);
@@ -143,6 +146,23 @@
         box-shadow: 0 6px 12px $shadow3-orange;
         transform: translateY(-2px);
       }
+    }
+  }
+
+  // Multi-button responsive layout
+  .multi-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    flex: 1 1 50%;
+    max-width: 50%;
+    
+    .button {
+      flex: 1 1 auto;
+      min-width: 80px;
+      margin-left: 0;
+      flex-shrink: 1;
     }
   }
 
