@@ -52,13 +52,6 @@ User setting imporovements
     - [ ] Add subtract 15 minutes button
     - [ ] Remove clicking on circles to hide, move to settings menu
     
-
-User improvements
-
-- [ ] Store if the user has paused in local storage
-- [ ] Store if the user is on break in local storage
-- [ ] Recall break and pause on reload
-
 Build Backend
 
 - [ ] Create backend boiler plate backend (Flask)
@@ -117,6 +110,9 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.06.2025` Store if the user has paused in local storage
+- [X] `11.06.2025` Store if the user is on break in local storage
+- [X] `11.06.2025` Recall break and pause on reload
 - [X] `11.06.2025` Convert all files to use variables for colors
 - [X] `11.05.2025` Create colors.scss file to store all colors
 - [X] `11.03.2025` Add a Patreon button at the top of user settings

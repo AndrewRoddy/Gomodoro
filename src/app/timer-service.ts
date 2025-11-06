@@ -11,7 +11,7 @@ export class TimerService {
     // Checks if we are in a browser and able to access local storage or not
     if (typeof window !== 'undefined' && window.localStorage) {
 
-      // Saved //
+      // Seconds //
       // Load saved seconds from localStorage
       const savedSeconds = localStorage.getItem('seconds');
       if (savedSeconds !== null) { // Only gets it if its already there
@@ -24,6 +24,21 @@ export class TimerService {
       if (savedRatio !== null) {
         this.ratio.set(parseInt(savedRatio, 10));
       }
+
+      // Break //
+      // Load saved break from localStorage
+      const savedBreak = localStorage.getItem('break');
+      if (savedBreak !== null) {
+        this.isBreak.set(savedBreak === 'true');
+      }
+
+      // Paused //
+      // Load saved break from localStorage
+      const isPaused = localStorage.getItem('paused');
+      if (isPaused !== null) {
+        this.isPaused.set(isPaused === 'true');
+      }
+
     }
   }
 
@@ -57,11 +72,19 @@ export class TimerService {
 
   // Break active or inactive
   readonly isBreak = signal(false);
-  updateBreak(value: boolean) { this.isBreak.set(value); }
+  updateBreak(value: boolean) { this.isBreak.set(value); 
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('break', value.toString());
+    }
+  }
 
   // Paused or not paused
   readonly isPaused = signal(false);
-  updatePause(value: boolean) { this.isPaused.set(value); }
+  updatePause(value: boolean) { this.isPaused.set(value);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('paused', value.toString());
+    }
+  }
 
 }
 
