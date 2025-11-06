@@ -25,23 +25,13 @@
         <p>Change the background appearance.</p>
       </div>
       <div class="multi-button">
-        <button 
-          class="button" 
-          
+        <button
+          *ngFor="let themeOpt of themeOptions"
+          class="button"
+          [class.active]="theme() === themeOpt"
+          (click)="setTheme(themeOpt)"
           type="button">
-          Light
-        </button>
-        <button 
-          class="button" 
-          
-          type="button">
-          Dark
-        </button>
-        <button 
-          class="button" 
-          
-          type="button">
-          Midnight
+          {{ themeOpt | titlecase }}
         </button>
       </div>
     </div>
