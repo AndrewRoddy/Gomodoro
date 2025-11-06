@@ -1,3 +1,5 @@
+@use '../colors' as *;
+
 .backButton {
     display: inline-block;
     // margin-top: 20px;
@@ -10,12 +12,12 @@
     border: none;
     cursor: pointer;
     color: white;
-    background: linear-gradient(135deg, #ff922f, #ff922f);
+    background: $orange;
     transition: all 0.25s ease;
     
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 14px rgba(255, 107, 0, 0.4);
+        box-shadow: 0 6px 14px $shadow6-orange;
     }
 
     &:active {
@@ -23,11 +25,11 @@
     }
 
     &.break-mode {
-        background: linear-gradient(135deg, #625780, #625780);
-        box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+        background :$purple;
+        box-shadow: 0 4px 12px $shadow6-gray;
 
         &:hover {
-        box-shadow: 0 6px 14px rgba(46, 204, 113, 0.4);
+        box-shadow: 0 6px 14px $shadow6-gray;
         }
     }
 }

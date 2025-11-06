@@ -1,3 +1,5 @@
+@use '../colors' as *;
+
 .mode {
   // Font settings
   font-family: 'Poppins', sans-serif;
@@ -10,9 +12,10 @@
 
   border: none; // No button border
   cursor: pointer; // Hand when hovering
-  color: white; // Text is white
-  background: #ff922f; // Break background color
   transition: all 0.25s ease;
+  
+  color: $text-white; // Text is white
+  background: $orange; // Break background color
 
   // Keeps the width constant 
   // switching between Work and Break
@@ -20,7 +23,7 @@
   
   &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 14px #ff922f66;
+      box-shadow: 0 6px 14px $shadow6-orange;
   }
 
   &:active {
@@ -32,20 +35,20 @@
     // C - Color
     // O - Opacity
     // #CCCCCCOO
-    background: #625780;
+    background: $purple;
     
     // Shadow while only break mode
     &:hover {
-      box-shadow: 0 6px 14px #62578066;
+      box-shadow: 0 6px 14px $shadow6-purple;
     }
   }
 
   // If in pause mode no matter break or not
   &.pause-mode {
-    background: #BBBBBB;
+    background: $pause;
     
     &:hover {
-      box-shadow: 0 6px 14px #bbbbbb7a;
+      box-shadow: 0 6px 14px $shadow6-gray;
     }
   }
 }

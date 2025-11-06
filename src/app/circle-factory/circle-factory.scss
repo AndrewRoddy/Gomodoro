@@ -1,9 +1,10 @@
+@use '../colors' as *;
 
 .circle-padding {
   position: relative;  // <-- this is crucial
-  width: 256px;        // or whatever your SVG size is
-  height: 256px;
   justify-content: center;
   align-items: center;
-  
+
+  width: 256px;        // or whatever your SVG size is
+  height: 256px;
 }

@@ -1,3 +1,5 @@
+@use '../colors' as *;
+
 .pauseButton {
   /* smaller left padding when NOT in pause mode */
   padding: 0.8rem 1.1rem 0.8rem 1.3rem;
@@ -10,13 +12,14 @@
   border-radius: 9999px;
   border: none;
   cursor: pointer;
-  color: white;
-  background: #ff922f;
+  color: $text-white;
   transition: all 0.25s ease;
+
+  background: $orange;
   
   &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(255, 107, 0, 0.4);
+      box-shadow: 0 6px 14px $shadow6-orange;
   }
 
   &:active {
@@ -27,10 +30,10 @@
     /* larger left padding when in pause mode */
   padding: 0.8rem 1.2rem 0.8rem 1.2rem;
 
-    background:  #BBBBBB;
+    background: $pause;
 
     &:hover {
-      box-shadow: 0 6px 14px #bbbbbb7a;
+      box-shadow: 0 6px 14px $shadow6-gray;
     }
   }
 

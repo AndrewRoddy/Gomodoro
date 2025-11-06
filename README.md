@@ -40,6 +40,25 @@ ng serve
 
 ## To Do
 
+User setting imporovements
+
+- [ ] Create settings menu 
+    - [ ] Convert all files to use variables for colors
+    - [ ] Create light, dark, and midnight modes
+
+    - [ ] Add "total time focused" time at bottom of settings
+    - [ ] Add ability to reset back to time when last closed
+      - Add saving previous time to local storage
+      - Should save when it runs the "reopen" thing
+    - [ ] Add subtract 15 minutes button
+    - [ ] Remove clicking on circles to hide, move to settings menu
+    
+
+User improvements
+
+- [ ] Store if the user has paused in local storage
+- [ ] Store if the user is on break in local storage
+- [ ] Recall break and pause on reload
 
 Build Backend
 
@@ -68,18 +87,7 @@ Patreon Skins
 - [ ] Save paused, break mode, chosen color, patreon data all in the local memory
 
 
-User setting imporovements
 
-- [ ] Create settings menu 
-    - [ ] Create light, dark, and midnight modes
-
-    - [ ] Add "total time focused" time at bottom of settings
-    - [ ] Add ability to reset back to time when last closed
-      - Add saving previous time to local storage
-      - Should save when it runs the "reopen" thing
-    - [ ] Add subtract 15 minutes button
-    - [ ] Remove clicking on circles to hide, move to settings menu
-    
 - [ ] Make sure the seconds can never go over max integer size
 
 Icons
@@ -110,6 +118,7 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.05.2025` Create colors.scss file to store all colors
 - [X] `11.03.2025` Add a Patreon button at the top of user settings
 - [X] `10.30.2025` User can change break time split (2:1, 3:1, 4:1, 5:1)
 - [X] `10.28.2025` Add reset time button
