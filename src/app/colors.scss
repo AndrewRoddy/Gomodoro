@@ -1,0 +1,36 @@
+/**
+ * Centralized color definitions 
+ * for SCSS files.
+ * Import this file in your 
+ * component SCSS files:
+ * @import '../colors'
+**/
+
+// Primary colors - Main brand colors
+$orange: #ff922f;
+$purple: #625780;
+
+$pause: #BBBBBB;
+$red: #ff3131;
+
+// Text colors
+$text-white: #ffffff;
+$text-black: #000000;
+$text-gray: #666666;
+
+// border
+$border-gray: #dddddd;
+
+// Background Colors
+$bg-white: #ffffff;
+$bg-medium-gray: #f0f0f0;
+$bg-light-gray: #f8f8f8;
+
+// Shadow colors with opacity
+$shadow6-orange: #ff922f66;
+$shadow3-orange: #ff922f33;
+
+$shadow6-gray: #bbbbbb66;
+$shadow6-red: #ff313166;
+$shadow6-purple: #62578066;
+$shadow-black: #00000033;
