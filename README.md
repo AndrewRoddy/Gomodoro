@@ -43,7 +43,6 @@ ng serve
 User setting imporovements
 
 - [ ] Create settings menu 
-    - [ ] Convert all files to use variables for colors
     - [ ] Create light, dark, and midnight modes
 
     - [ ] Add "total time focused" time at bottom of settings
@@ -118,6 +117,7 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.06.2025` Convert all files to use variables for colors
 - [X] `11.05.2025` Create colors.scss file to store all colors
 - [X] `11.03.2025` Add a Patreon button at the top of user settings
 - [X] `10.30.2025` User can change break time split (2:1, 3:1, 4:1, 5:1)

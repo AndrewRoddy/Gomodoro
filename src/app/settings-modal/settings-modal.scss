@@ -5,7 +5,7 @@
 
   h2 {
     margin: 0 0 2rem 0;
-    color: #333;
+    color: $text-dark-gray;
     font-size: 2rem;
     font-weight: 600;
   }
@@ -78,7 +78,7 @@
       height: 26px;
       border-radius: 50%;
       transition: transform 0.3s ease;
-      box-shadow: 0 2px 4px $shadow-black;
+      box-shadow: 0 2px 4px $shadow3-black;
     }
 
     &.active .toggle-slider {
@@ -126,21 +126,21 @@
       border-radius: 8px;
       cursor: pointer;
       font-weight: 700;
-      color: #333;
+      color: $text-dark-gray;
       min-width: 44px;
       text-align: center;
       transition: all 0.18s ease;
 
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+        box-shadow: 0 4px 8px $shadow3-black;
       }
 
       &.active {
         background: $orange;
         border-color: $orange;
         color: $text-white;
-        box-shadow: 0 6px 12px rgba(255,146,47,0.18);
+        box-shadow: 0 6px 12px $shadow3-orange;
         transform: translateY(-2px);
       }
     }
@@ -159,11 +159,11 @@
     // Patreon thing
     .patreon {
         padding: 0.6rem 1.0rem;
-        background: $text-black;
+        background: $bg-black;
         &:hover {
-            background: #333333;
+            background: $bg-dark-gray;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px #3333334d;
+            box-shadow: 0 4px 8px $shadow3-dark-gray;
         }
     }
     
