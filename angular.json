@@ -40,7 +40,7 @@
                 "input": "public/assets",
                 "output": "/assets"
               }
-            ]
+            ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {

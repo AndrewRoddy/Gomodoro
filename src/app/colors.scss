@@ -6,8 +6,17 @@
  * @use '../colors' as *;
 **/
 
-// Primary colors
+// This doesn't work at all
+// :root {
+//     // Primary colors
+//     --orange: #ff922f;
+// }
+
+// $orange: var(--orange);
+
+// This works perfectly fine
 $orange: #ff922f;
+
 $purple: #625780;
 $pause: #BBBBBB;
 $red: #ff3131;
