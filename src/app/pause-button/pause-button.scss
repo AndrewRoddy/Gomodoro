@@ -12,35 +12,51 @@
   border-radius: 9999px;
   border: none;
   cursor: pointer;
-  color: $text-white;
+  color: --text-white;
   transition: all 0.25s ease;
 
   background: var(--orange);
   
   &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 14px $shadow6-orange;
+      box-shadow: 0 6px 14px var(--shadow6-orange);
   }
 
   &:active {
     transform: scale(0.98);
   }
 
-  &.pause-mode {
-    /* larger left padding when in pause mode */
-  padding: 0.8rem 1.2rem 0.8rem 1.2rem;
-
-    background: $pause;
-
-    &:hover {
-      box-shadow: 0 6px 14px $shadow6-gray;
-    }
-  }
-
-  // Makes buttons smaller and centered
+  // Runs for the play button
   img {
+    // For both play and pause
     width: 18px;
     height: 20px;
     vertical-align: middle;
+    filter: brightness(var(--brightness)) saturate(100%);
+
+    /* for play icon */
+    background-color: var(--bg-white);
+    mask: url('/assets/pause-icon.svg') no-repeat center;
+    mask-size: contain;
+
+    
+  }
+
+  &.pause-mode {
+    /* larger left padding when in pause mode */
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+
+    background: var(--pause);
+
+    img {
+      /* makes icon match bg-white color */
+      background-color: var(--bg-white);
+      mask: url('/assets/play-icon.svg') no-repeat center;
+      mask-size: contain;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 14px var(--shadow6-gray);
+    }
   }
 }

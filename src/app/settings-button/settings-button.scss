@@ -5,8 +5,13 @@
         /* slightly larger icon */
         vertical-align: middle;
 
-        /* makes icon white */
-        filter: brightness(0) invert(1);
+        /* makes icon match bg-white color */
+        filter: brightness(var(--brightness)) saturate(100%);
+        background-color: var(--bg-white);
+        mask: url('/assets/settings-icon.svg') no-repeat center;
+        mask-size: contain;
+        width: 24px;
+        height: 24px;
     }
 
     display: inline-block;
@@ -20,13 +25,13 @@
     border: none;
     cursor: pointer;
     color: white;
-    // background: $orange;
+    
     background: var(--orange);
     transition: all 0.25s ease;
     
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 14px $shadow6-orange;
+        box-shadow: 0 6px 14px var(--shadow6-orange);
     }
 
     &:active {
@@ -41,7 +46,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $shadow9-black;
+    background: var(--shadow9-black);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,13 +56,13 @@
 
 .modal-content {
     position: relative;
-    background: white;
+    background: var(--bg-white);
     border-radius: 12px;
     padding: 2rem;
     width: calc(100vw - 30vw); /* 40px padding on each side */
     height: calc(100vh - 30vh); /* 40px padding on top and bottom */
     overflow-y: auto;
-    box-shadow: 0 10px 40px $shadow3-black;
+    box-shadow: 0 10px 40px var(--shadow3-black);
     animation: slideUp 0.3s ease;
 }
 
@@ -69,7 +74,7 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: $text-gray;
+    color: var(--text-gray);
     width: 2rem;
     height: 2rem;
     display: flex;
@@ -79,8 +84,8 @@
     transition: all 0.2s ease;
 
     &:hover {
-        background: $bg-medium-gray;
-        color: $text-dark-gray;
+        background: var(--bg-medium-gray);
+        color: var(--text-dark-gray);
     }
 }
 

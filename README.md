@@ -110,6 +110,7 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.13.2025` Base all components on local styles.scss file
 - [X] `11.06.2025` Store if the user has paused in local storage
 - [X] `11.06.2025` Store if the user is on break in local storage
 - [X] `11.06.2025` Recall break and pause on reload

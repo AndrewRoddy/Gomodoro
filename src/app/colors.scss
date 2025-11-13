@@ -9,45 +9,45 @@
 // This doesn't work at all
 // :root {
 //     // Primary colors
-//     --orange: #ff922f;
+//     $orange: #ff922f;
 // }
 
-// $orange: var(--orange);
+// $orange: var($orange);
 
 // This works perfectly fine
-// $orange: #ff922f;
 
-$purple: #625780;
-$pause: #BBBBBB;
-$red: #ff3131;
+// $orange: #ff922f;
+// $purple: #625780;
+// $pause: #BBBBBB;
+// $red: #ff3131;
 
 // Text colors
-$text-white: #ffffff;
-$text-black: #000000;
-$text-gray: #666666;
-$text-dark-gray: #333333;
+// $text-white: #ffffff;
+// $text-black: #000000;
+// $text-gray: #666666;
+// $text-dark-gray: #333333;
 
 // border
-$border-gray: #dddddd;
+// $border-gray: #dddddd;
 
 // Background Colors
-$bg-white: #ffffff;
-$bg-black: #000000;
-$bg-medium-gray: #f0f0f0;
-$bg-light-gray: #f8f8f8;
-$bg-dark-gray: #333333;
+// $bg-white: #ffffff;
+// $bg-black: #000000;
+// $bg-medium-gray: #f0f0f0;
+// $bg-light-gray: #f8f8f8;
+// $bg-dark-gray: #333333;
 
 // Shadow colors with opacity
-$shadow6-orange: #ff922f66;
-$shadow3-orange: #ff922f33;
+// $shadow6-orange: #ff922f66;
+// $shadow3-orange: #ff922f33;
 
-$shadow9-black: #00000099;
-$shadow6-black: #00000066;
-$shadow3-black: #00000033;
+// $shadow9-black: #00000099;
+// $shadow6-black: #00000066;
+// $shadow3-black: #00000033;
 
-$shadow6-gray: #bbbbbb66;
-$shadow6-red: #ff313166;
-$shadow6-purple: #62578066;
+// $shadow6-gray: #bbbbbb66;
+// $shadow6-red: #ff313166;
+// $shadow6-purple: #62578066;
 
 
-$shadow3-dark-gray: #33333333;
+// $shadow3-dark-gray: #33333333;

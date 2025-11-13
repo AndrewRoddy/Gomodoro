@@ -14,7 +14,7 @@
   cursor: pointer; // Hand when hovering
   transition: all 0.25s ease;
   
-  color: $text-white; // Text is white
+  color: var(--text-white); // Text is white
   background: var(--orange); // Break background color
 
   // Keeps the width constant 
@@ -23,7 +23,7 @@
   
   &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 14px $shadow6-orange;
+      box-shadow: 0 6px 14px var(--shadow6-orange);
   }
 
   &:active {
@@ -35,20 +35,20 @@
     // C - Color
     // O - Opacity
     // #CCCCCCOO
-    background: $purple;
+    background: var(--purple);
     
     // Shadow while only break mode
     &:hover {
-      box-shadow: 0 6px 14px $shadow6-purple;
+      box-shadow: 0 6px 14px var(--shadow6-purple);
     }
   }
 
   // If in pause mode no matter break or not
   &.pause-mode {
-    background: $pause;
+    background: var(--pause);
     
     &:hover {
-      box-shadow: 0 6px 14px $shadow6-gray;
+      box-shadow: 0 6px 14px var(--shadow6-gray);
     }
   }
 }

@@ -17,7 +17,7 @@
     
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 14px $shadow6-orange;
+        box-shadow: 0 6px 14px --shadow6-orange;
     }
 
     &:active {
@@ -25,11 +25,11 @@
     }
 
     &.break-mode {
-        background :$purple;
-        box-shadow: 0 4px 12px $shadow6-gray;
+        background :var(--purple);
+        box-shadow: 0 4px 12px --shadow6-gray;
 
         &:hover {
-        box-shadow: 0 6px 14px $shadow6-gray;
+        box-shadow: 0 6px 14px --shadow6-gray;
         }
     }
 }

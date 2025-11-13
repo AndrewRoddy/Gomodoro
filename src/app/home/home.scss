@@ -108,8 +108,7 @@ main {
 .divider {
     height: 1px;
     width: 100%;
-    // background: var(--red-to-pink-to-purple-horizontal-gradient);
-    background: $bg-medium-gray;
+    background: var(--bg-medium-gray);
     margin-block: 0.5rem;
 }
 
