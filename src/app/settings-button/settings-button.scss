@@ -20,7 +20,8 @@
     border: none;
     cursor: pointer;
     color: white;
-    background: $orange;
+    // background: $orange;
+    background: var(--orange);
     transition: all 0.25s ease;
     
     &:hover {

@@ -1,6 +1,7 @@
 @use '../colors' as *;
 
 .circle-container {
+  --circle-active-color: var(--orange);
   width: 256px;
   height: 256px;
   position: relative;

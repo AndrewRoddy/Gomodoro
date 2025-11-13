@@ -15,7 +15,7 @@
   transition: all 0.25s ease;
   
   color: $text-white; // Text is white
-  background: $orange; // Break background color
+  background: var(--orange); // Break background color
 
   // Keeps the width constant 
   // switching between Work and Break

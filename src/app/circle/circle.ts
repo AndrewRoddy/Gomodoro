@@ -14,7 +14,7 @@ export class Circle {
   @Input() seconds = 0;
   @Input() total = 100;
   @Input() stroke = 10;
-  @Input() activeColor = '#ff922f';
+  @Input() activeColor = 'var(--circle-active-color)';
   
   get circumference() {return 2 * Math.PI * this.radius; }
 

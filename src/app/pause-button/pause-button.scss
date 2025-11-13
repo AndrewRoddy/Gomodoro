@@ -15,7 +15,7 @@
   color: $text-white;
   transition: all 0.25s ease;
 
-  background: $orange;
+  background: var(--orange);
   
   &:hover {
       transform: translateY(-2px);

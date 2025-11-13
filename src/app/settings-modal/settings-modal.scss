@@ -66,7 +66,7 @@
     }
 
     &.active {
-      background: $orange;
+      background: var(--orange);
     }
 
     .toggle-slider {
@@ -88,7 +88,7 @@
 
   // Reset Button Styles
   .button {
-    background: $orange;
+    background: var(--orange);
     color: $bg-white;
     padding: 0.6rem 1.5rem;
     border: none;
@@ -102,7 +102,7 @@
     margin-left: 1rem;
 
     &:hover {
-      background: $orange;
+      background: var(--orange);
       transform: translateY(-2px);
       box-shadow: 0 4px 8px $shadow3-orange;
     }
@@ -140,8 +140,8 @@
       }
 
       &.active {
-        background: $orange;
-        border-color: $orange;
+        background: var(--orange);
+        border-color: var(--orange);
         color: $text-white;
         box-shadow: 0 6px 12px $shadow3-orange;
         transform: translateY(-2px);
