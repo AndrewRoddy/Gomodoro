@@ -149,6 +149,18 @@
         box-shadow: 0 6px 12px var(--shadow3-orange);
         transform: translateY(-2px);
       }
+
+      &.bad {
+        background: var(--red);
+        border-color: var(--red);
+        color: var(--text-white);
+
+        &:hover {
+          background: var(--red);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px var(--shadow6-red);
+        }
+      }
     }
   }
 
@@ -189,16 +201,6 @@
             background: var(--bg-dark-gray);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px var(--shadow3-dark-gray);
-        }
-    }
-
-    // Bad button overrides all colors
-    .bad {
-        background: var(--red);
-        &:hover {
-            background: var(--red);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px var(--shadow6-red);
         }
     }
     
