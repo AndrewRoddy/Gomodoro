@@ -179,15 +179,7 @@
     }
   }
 
-    // Bad thing
-    .bad {
-        background: var(--red);
-        &:hover {
-            background: var(--red);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px var(--shadow6-red);
-        }
-    }
+    
 
     // Patreon thing
     .patreon {
@@ -197,6 +189,16 @@
             background: var(--bg-dark-gray);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px var(--shadow3-dark-gray);
+        }
+    }
+
+    // Bad button overrides all colors
+    .bad {
+        background: var(--red);
+        &:hover {
+            background: var(--red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow6-red);
         }
     }
     

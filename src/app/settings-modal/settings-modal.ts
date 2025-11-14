@@ -16,10 +16,12 @@ export class SettingsModal {
   // expose the ratio signal from the timer service
   public ratio = this.timerService.ratio;
   public theme = this.timerService.theme;
+  public hideCircles = this.timerService.hideCircles;
   
   // options for ratio (work : break)
   public ratioOptions = [1, 2, 3, 4, 5];
   public themeOptions = ["Light", "Dark", "Midnight"];
+  public hideCircleOptions = ["Show", "Hide"];
 
   setRatio(value: number) {
     this.timerService.updateRatio(value);
@@ -27,6 +29,10 @@ export class SettingsModal {
 
   setTheme(value: string) {
     this.timerService.updateTheme(value);
+  }
+
+  setCircles(value: string) {
+    this.timerService.updateHiddenCircles(value);
   }
 
   resetTimer() {

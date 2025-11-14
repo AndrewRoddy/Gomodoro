@@ -45,11 +45,13 @@ User setting imporovements
 - [ ] Create settings menu 
 
     - [ ] Add "total time focused" time at bottom of settings
+
     - [ ] Add ability to reset back to time when last closed
       - Add saving previous time to local storage
       - Should save when it runs the "reopen" thing
+
     - [ ] Add subtract 15 minutes button
-    - [ ] Remove clicking on circles to hide, move to settings menu
+
     
 Build Backend
 
@@ -109,6 +111,8 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.14.2025` Move clicking on circles to hide to settings menu
+- [X] `11.14.2025` Remove clicking on circles to hide
 - [X] `11.14.2025` Create light, dark, and midnight modes
 - [X] `11.13.2025` Base all components on local styles.scss file
 - [X] `11.06.2025` Store if the user has paused in local storage

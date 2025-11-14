@@ -36,8 +36,6 @@ export class CircleFactory {
 
   private firstCircle: boolean = false;
 
-  public readonly showCircles = signal(true);
-
   constructor() {
     effect(() => {
       // Gets the seconds and the total
@@ -68,7 +66,8 @@ export class CircleFactory {
   // Updates the circles with secons being updated
   private updateCircles(): void {
     this.circles.update(circles => {
-      if (this.showCircles() === false) {
+      // Hide circles if hideCircles is set to "Hide"
+      if (this.timerService.hideCircles() === "Hide") {
         // When circles are hidden, keep a single placeholder circle with 0 seconds
         return [{
           radius: this.baseRadius,
@@ -131,10 +130,5 @@ export class CircleFactory {
       return updated;
 
     })
-  }
-
-  // Allows the user to click on the time to edit the dashes
-  toggleCircles() {
-      this.showCircles.update(v => !v);
   }
 }

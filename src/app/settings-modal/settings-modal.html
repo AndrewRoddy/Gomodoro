@@ -57,6 +57,24 @@
     </div>
 
     
+    <!-- Hide Circles -->
+    <div class="setting-item">
+      <div class="setting-info">
+        <h3>Hide Circles</h3>
+        <p>Hides the concentric circles</p>
+      </div>
+      <div class="toggle" role="tablist" aria-label="Hide Circles">
+        <button
+          *ngFor="let opt of hideCircleOptions"
+          class="option"
+          [class.active]="hideCircles() === opt" 
+          (click)="setCircles(opt)"
+          type="button">
+          {{opt}}
+        </button>
+      </div>
+    </div>
+    
     <!-- Reset Timer Button -->
     <div class="setting-item">
       <div class="setting-info">

@@ -39,6 +39,13 @@ export class TimerService {
         this.isBreak.set(savedBreak === 'true');
       }
 
+      // Hidden Circles //
+      // Load saved break from localStorage
+      const hiddenCircles = localStorage.getItem('hideCircles');
+      if (hiddenCircles !== null) {
+        this.hideCircles.set(hiddenCircles);
+      }
+
       // Paused //
       // Load saved break from localStorage
       const isPaused = localStorage.getItem('paused');
@@ -92,6 +99,14 @@ export class TimerService {
   updateBreak(value: boolean) { this.isBreak.set(value); 
     if (typeof window !== 'undefined' && window.localStorage) {
       localStorage.setItem('break', value.toString());
+    }
+  }
+
+  // Break active or inactive
+  readonly hideCircles = signal("Show");
+  updateHiddenCircles(value: string) { this.hideCircles.set(value); 
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('hideCircles', value.toString());
     }
   }
 
