@@ -29,6 +29,29 @@
     
     
     --shadow3-dark-gray: #33333333; //  #33333333;
+    
+    
+    //
+    // OVERWRITTEN : HERE FOR BACKUP INCASE OF FAILURE
+    //
+
+    // Brightness control 
+    --brightness: 100;
+    --text-white: #ffffff; //  #ffffff;
+    --text-black: #000000; //  #000000;
+    
+    // Circle Backgroud color
+    --circle-background: #e0e0e0; // #e0e0e0;
+    
+    // Background Colors
+    --bg-white: #ffffff; //  #ffffff;
+    --bg-black: #000000; //  #000000;
+    --bg-medium-gray: #f0f0f0; //  #f0f0f0;
+    --bg-light-gray: #f8f8f8; //  #f8f8f8;
+    --bg-dark-gray: #333333; //  #333333;
+    
+    // border
+    --border-gray: #dddddd; //  #dddddd;
 }
 body.light {
     background-color:#ffffff;
