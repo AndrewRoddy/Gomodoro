@@ -42,6 +42,11 @@
                 "glob": "settings-icon.svg",
                 "input": "public/assets",
                 "output": "/assets"
+              },
+              {
+                "glob": "logoOrange.svg",
+                "input": "public/assets/logo",
+                "output": "/assets"
               }
             ],
             "server": "src/main.server.ts",
