@@ -82,33 +82,33 @@ body.light {
 }
 body.dark {
     // Brightness control 
-    --brightness: 0.2;
+    --brightness: 0.120;
     
     // Text colors
     --text-white: #222222;
     --text-black: #eeeeee; 
-    --text-gray: #555555; 
+    --text-gray: #999999; 
     --text-dark-gray: #dddddd;
     
-    background-color:#111111;
+    background-color:#1f1f1f;
     
     // Circle Backgroud color
     --circle-background: #202020;
     
     // Background Colors
-    --bg-white: #111111;
+    --bg-white: #1f1f1f;
     --bg-black: #eeeeee;
-    --bg-medium-gray: #222222;
-    --bg-light-gray: #333333;
+    --bg-light-gray: #222222;
+    --bg-medium-gray: #333333;
     --bg-dark-gray: #444444;
     
     // border
     --border-gray: #555555; 
 
     // Shadow colors with opacity
-    --shadow9-black: #55555599;
-    --shadow6-black: #55555566;
-    --shadow3-black: #55555533; 
+    --shadow9-black: #77777799;
+    --shadow6-black: #77777766;
+    --shadow3-black: #77777733; 
 }
 body.midnight {
     // Brightness control 

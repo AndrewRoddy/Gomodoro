@@ -31,12 +31,19 @@ In other apps like "FocusPomo", "Forest", and even "Focus Friend" they have a la
 
 Instead with Gomodoro blocking apps will be discouraged. Apps that are accessed instead of stopping the focus session will immediately trigger break mode and start counting down. This will only occur if the user has specifically selected this feature to be turned on. Fully blocking apps will still be a feature but not be recommended.
 
-### Building
+## Building
 
+Run on localhost
 ```
 npm i
 ng serve
 ```
+
+Build exe with tauri
+```
+npm run tauri build
+```
+
 
 ## To Do
 
