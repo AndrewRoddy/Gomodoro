@@ -19,13 +19,10 @@
     --shadow6-orange: #ff922f66; //  #ff922f66;
     --shadow3-orange: #ff922f33; //  #ff922f33;
     
-    --shadow9-black: #00000099; //  #00000099;
-    --shadow6-black: #00000066; //  #00000066;
-    --shadow3-black: #00000033; //  #00000033;
     
-    --shadow6-gray: #bbbbbb66; //  #bbbbbb66;
-    --shadow6-red: #ff313166; //  #ff313166;
-    --shadow6-purple: #62578066; //  #62578066;
+    --shadow6-gray: #bbbbbb66;
+    --shadow6-red: #ff313166; 
+    --shadow6-purple: #62578066;
     
     
     --shadow3-dark-gray: #33333333; //  #33333333;
@@ -34,7 +31,11 @@
     //
     // OVERWRITTEN : HERE FOR BACKUP INCASE OF FAILURE
     //
-
+    // Shadow colors with opacity
+    --shadow9-black: #00000099;
+    --shadow6-black: #00000066;
+    --shadow3-black: #00000033; 
+    
     // Brightness control 
     --brightness: 100;
     --text-white: #ffffff; //  #ffffff;
@@ -73,6 +74,11 @@ body.light {
     
     // border
     --border-gray: #dddddd; //  #dddddd;
+
+    // Shadow colors with opacity
+    --shadow9-black: #00000099;
+    --shadow6-black: #00000066;
+    --shadow3-black: #00000033; 
 }
 body.dark {
     // Brightness control 
@@ -98,6 +104,11 @@ body.dark {
     
     // border
     --border-gray: #555555; 
+
+    // Shadow colors with opacity
+    --shadow9-black: #55555599;
+    --shadow6-black: #55555566;
+    --shadow3-black: #55555533; 
 }
 body.midnight {
     // Brightness control 
@@ -120,7 +131,12 @@ body.midnight {
     --bg-medium-gray: #222222; //  #f0f0f0;
     --bg-light-gray: #333333; //  #f8f8f8;
     --bg-dark-gray: #444444; //  #333333;
-
+    
     // border
     --border-gray: #555555; //  #dddddd;
+
+    // Shadow colors with opacity
+    // --shadow9-black: #55555599; // Removes back light
+    --shadow6-black: #55555566;
+    --shadow3-black: #55555533; 
 }
