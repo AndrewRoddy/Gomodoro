@@ -43,7 +43,6 @@ ng serve
 User setting imporovements
 
 - [ ] Create settings menu 
-    - [ ] Create light, dark, and midnight modes
 
     - [ ] Add "total time focused" time at bottom of settings
     - [ ] Add ability to reset back to time when last closed
@@ -110,6 +109,7 @@ Start recording
   - This is to prevent accidentally leaving it on for days
 
 ### To Do : Complete
+- [X] `11.14.2025` Create light, dark, and midnight modes
 - [X] `11.13.2025` Base all components on local styles.scss file
 - [X] `11.06.2025` Store if the user has paused in local storage
 - [X] `11.06.2025` Store if the user is on break in local storage

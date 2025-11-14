@@ -3,48 +3,101 @@
 @use 'app/colors' as *;
 
 :root {
-    background-color:#ffffff;
 
+    // Brightness control 
+    --brightness: 100;
+    
     --orange: #ff922f; // #ff922f;
     --purple: #625780; // #625780;
     --pause:  #BBBBBB; // #BBBBBB;
     --red:    #ff3131; // #ff3131;
 
+    
+    
+    
+    // Shadow colors with opacity
+    --shadow6-orange: #ff922f66; //  #ff922f66;
+    --shadow3-orange: #ff922f33; //  #ff922f33;
+    
+    --shadow9-black: #00000099; //  #00000099;
+    --shadow6-black: #00000066; //  #00000066;
+    --shadow3-black: #00000033; //  #00000033;
+    
+    --shadow6-gray: #bbbbbb66; //  #bbbbbb66;
+    --shadow6-red: #ff313166; //  #ff313166;
+    --shadow6-purple: #62578066; //  #62578066;
+    
+    
+    --shadow3-dark-gray: #33333333; //  #33333333;
+}
+body.light {
+    background-color:#ffffff;
+    
     // Brightness control 
     --brightness: 100;
-
-    // Circle Backgroud color
-    --circle-background: #e0e0e0; // #e0e0e0;
-
-    // Text colors
     --text-white: #ffffff; //  #ffffff;
     --text-black: #000000; //  #000000;
-    --text-gray: #666666; //  #666666;
-    --text-dark-gray: #333333; //  #333333;
-
-    // border
-    --border-gray: #dddddd; //  #dddddd;
-
+    
+    // Circle Backgroud color
+    --circle-background: #e0e0e0; // #e0e0e0;
+    
     // Background Colors
     --bg-white: #ffffff; //  #ffffff;
     --bg-black: #000000; //  #000000;
     --bg-medium-gray: #f0f0f0; //  #f0f0f0;
     --bg-light-gray: #f8f8f8; //  #f8f8f8;
     --bg-dark-gray: #333333; //  #333333;
-
-    // Shadow colors with opacity
-    --shadow6-orange: #ff922f66; //  #ff922f66;
-    --shadow3-orange: #ff922f33; //  #ff922f33;
-
-    --shadow9-black: #00000099; //  #00000099;
-    --shadow6-black: #00000066; //  #00000066;
-    --shadow3-black: #00000033; //  #00000033;
-
-    --shadow6-gray: #bbbbbb66; //  #bbbbbb66;
-    --shadow6-red: #ff313166; //  #ff313166;
-    --shadow6-purple: #62578066; //  #62578066;
-
-
-    --shadow3-dark-gray: #33333333; //  #33333333;
+    
+    // border
+    --border-gray: #dddddd; //  #dddddd;
 }
+body.dark {
+    // Brightness control 
+    --brightness: 0.2;
+    
+    // Text colors
+    --text-white: #222222;
+    --text-black: #eeeeee; 
+    --text-gray: #555555; 
+    --text-dark-gray: #dddddd;
+    
+    background-color:#111111;
+    
+    // Circle Backgroud color
+    --circle-background: #202020;
+    
+    // Background Colors
+    --bg-white: #111111;
+    --bg-black: #eeeeee;
+    --bg-medium-gray: #222222;
+    --bg-light-gray: #333333;
+    --bg-dark-gray: #444444;
+    
+    // border
+    --border-gray: #555555; 
+}
+body.midnight {
+    // Brightness control 
+    --brightness: 0;
+    
+    // Text colors
+    --text-white: #000000; //  #ffffff;
+    --text-black: #ffffff; //  #000000;
+    --text-gray: #666666; //  #666666;
+    --text-dark-gray: #dddddd; //  #333333;
+    
+    background-color:#000000;
+    
+    // Circle Backgroud color
+    --circle-background: #202020; // #e0e0e0;
+    
+    // Background Colors
+    --bg-white: #000000; //  #ffffff;
+    --bg-black: #ffffff; //  #000000;
+    --bg-medium-gray: #222222; //  #f0f0f0;
+    --bg-light-gray: #333333; //  #f8f8f8;
+    --bg-dark-gray: #444444; //  #333333;
 
+    // border
+    --border-gray: #555555; //  #dddddd;
+}

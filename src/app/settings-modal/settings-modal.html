@@ -19,16 +19,22 @@
     </div> -->
 
     <!-- Dark/Light/Midnight Mode Button -->
-    <!-- <div class="setting-item">
+    <div class="setting-item">
       <div class="setting-info">
         <h3>Themes</h3>
         <p>Change the background appearance.</p>
       </div>
-      <div class="multi-button">
-        <button>
-        </button>
+      <div class="toggle">
+        <button 
+        *ngFor="let opt of themeOptions"
+        class="option" 
+        [class.active]="theme() === opt" 
+        (click)="setTheme(opt)"
+        type="button">
+        {{opt}}
+      </button>
       </div>
-    </div> -->
+    </div>
 
     <!-- Work : Break Ratio Setting -->
     <div class="setting-item">
@@ -36,11 +42,13 @@
         <h3>Work : Break Ratio</h3>
         <p>Minutes of work : Minutes of break.</p>
       </div>
-      <div class="ratio-toggle" role="tablist" aria-label="Work to break ratio">
+      <div class="toggle" role="tablist" aria-label="Work to break ratio">
+        <!-- *ngFor - everything in the list -->
+         <!-- {{opt}} - the name of the item in the list -->
         <button
           *ngFor="let opt of ratioOptions"
-          class="ratio-option"
-          [class.active]="ratio() === opt"
+          class="option"
+          [class.active]="ratio() === opt" 
           (click)="setRatio(opt)"
           type="button">
           {{opt}}:1

@@ -116,7 +116,7 @@
   }
 
   // Ratio segmented control
-  .ratio-toggle {
+  .toggle {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -124,7 +124,7 @@
     flex: 1 1 50%;
     max-width: 50%;
 
-    .ratio-option {
+    .option {
       border: 1px solid var(--border-gray);
       padding: 0.45rem 0.65rem;
       background: transparent;

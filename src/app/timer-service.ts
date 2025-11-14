@@ -25,6 +25,13 @@ export class TimerService {
         this.ratio.set(parseInt(savedRatio, 10));
       }
 
+      // Theme //
+      // Load saved ratio from localStorage (work:break ratio)
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme !== null) {
+        this.theme.set(savedTheme);
+      }
+
       // Break //
       // Load saved break from localStorage
       const savedBreak = localStorage.getItem('break');
@@ -63,6 +70,16 @@ export class TimerService {
     if (typeof window !== 'undefined' && window.localStorage) {
       // Save rounded value to localStorage whenever it updates
       localStorage.setItem('ratio', value.toString());
+    }
+  }
+
+  // Ratio // X:1 X minutes of work vs break
+  readonly theme = signal("Light");
+  updateTheme(value: string) { this.theme.set(value);
+
+    // Makes sure we are in a browser before trying to save the ratio
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('theme', value.toString());
     }
   }
 
