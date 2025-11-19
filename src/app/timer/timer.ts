@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from "@angular/core";
 import { Title } from '@angular/platform-browser';
 import { TimerService } from "../timer-service";
+import { zip } from "rxjs";
 
 @Component({
     selector: 'app-timer',
@@ -166,13 +167,16 @@ export class Timer {
 
     // Formats the time to only show minutes
     private formattedTime(totalSeconds: number) {
-        let date: string = new Date(totalSeconds * 1000).toISOString();
+        const seconds = Math.floor(totalSeconds);
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
 
-        if (totalSeconds < 10) return date.slice(18,19); // s
-        if (totalSeconds < 60) return date.slice(17,19);; // ss
-        if (totalSeconds < (60*60)) return date.slice(14,19) // mm:ss
-        if (totalSeconds < 10*(60*60)) return date.slice(12,19); // h:mm:ss
-        return date.slice(11,19); // hh:mm:ss
+        if (seconds < 10) return secs.toString(); // s
+        if (seconds < 60) return secs.toString().padStart(2, '0'); // ss
+        if (seconds < (60*60)) return `${minutes}:${secs.toString().padStart(2, '0')}`; // mm:ss
+        if (seconds < 10*(60*60)) return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`; // h:mm:ss
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`; // hh:mm:ss
     }
 
 }

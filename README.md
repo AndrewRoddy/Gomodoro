@@ -47,77 +47,21 @@ npm run tauri build
 
 ## To Do
 
+Bugs
+- [ ] On loading of time inbetween running states circles inside do not update
+- [ ] On pressing break/work button while paused time does not update
+
 User setting imporovements
-
 - [ ] Create settings menu 
-
     - [ ] Add "total time focused" time at bottom of settings
-
     - [ ] Add ability to reset back to time when last closed
       - Add saving previous time to local storage
       - Should save when it runs the "reopen" thing
-
     - [ ] Add subtract 15 minutes button
-
-    
-Build Backend
-
-- [ ] Create backend boiler plate backend .NET
-
-- [ ] Set up render backend for the API calls
-- [ ] Check if the user has paid
-- [ ] Connect it to Supabase
-
-
-Patreon integration
-
-- [ ] Show username when signed in with patreon
-- [ ] Store if user is paying or not paying
-- [ ] Use Supabase database to store seconds user currently has every 30 seconds
-- [ ] Create Patreon integration to fetch that data
-- [ ] Create selector to choose the most up to date time for the user
-- [ ] Have it sync data from patreon account (paid member)
-
-
-Patreon Skins
-
-- [ ] Create patreon timer skins (background, timer, text, etc)
-- [ ] Create modal to select theme the user wants to use
-- [ ] Add visual skins with Patreon integration (paid member)
-- [ ] Save paused, break mode, chosen color, patreon data all in the local memory
-
-
-
 - [ ] Make sure the seconds can never go over max integer size
 
-Icons
-- [ ] Fix icons not appearing in obsidian.md
-
-Improve window size
-- [ ] Auto format everything to fit the window better
-    - [ ] When squishing up show the timer and circle very small
-    - [ ] Reformat page for when fully zoomed in / zoomed out
-
-Animations
-
-- [ ] Have starting from zero circle animation on reload / initial load
-
-Start recording
-- [ ] **Move project to Ionic for Mobile**
-- [ ] Create text logo
-- [ ] Create app icon
-- [ ] Fully rework desktop layout for mobile first
-
-  - Mobile should look exactly like desktop does in mobile mode
-- [ ] Publish mobile app in beta
-- [ ] **Mobile Release**
-- [ ] Create "live" lockscreen widget that shows current time working
-- [ ] Create dynamic island integration
-- [ ] Every 6 hours send notification asking if the user is still there.
-
-  - This is to prevent accidentally leaving it on for days
-
 ### To Do : Complete
+- [X] `11.18.2025` Times above 24 hours now display properly
 - [X] `11.14.2025` Move clicking on circles to hide to settings menu
 - [X] `11.14.2025` Remove clicking on circles to hide
 - [X] `11.14.2025` Create light, dark, and midnight modes
@@ -161,7 +105,51 @@ Start recording
 - [x] `10.09.2025` Create Angular Boiler Plate
 - [x] `10.08.2025` Create Repository
 
-### Unimportant Features
+### Unimportant Cool Features
+
+Build Backend
+- [ ] Create backend boiler plate backend .NET
+- [ ] Set up render backend for the API calls
+- [ ] Check if the user has paid
+- [ ] Connect it to Supabase
+
+Patreon integration
+- [ ] Show username when signed in with patreon
+- [ ] Store if user is paying or not paying
+- [ ] Use Supabase database to store seconds user currently has every 30 seconds
+- [ ] Create Patreon integration to fetch that data
+- [ ] Create selector to choose the most up to date time for the user
+- [ ] Have it sync data from patreon account (paid member)
+
+Patreon Skins
+- [ ] Create patreon timer skins (background, timer, text, etc)
+- [ ] Create modal to select theme the user wants to use
+- [ ] Add visual skins with Patreon integration (paid member)
+- [ ] Save paused, break mode, chosen color, patreon data all in the local memory
+
+Icons
+- [ ] Fix icons not appearing in obsidian.md
+
+Improve window size
+- [ ] Auto format everything to fit the window better
+    - [ ] When squishing up show the timer and circle very small
+    - [ ] Reformat page for when fully zoomed in / zoomed out
+
+Animations
+- [ ] Have starting from zero circle animation on reload / initial load
+
+Start recording
+- [ ] **Move project to Ionic for Mobile**
+- [ ] Create text logo
+- [ ] Create app icon
+- [ ] Fully rework desktop layout for mobile first
+
+  - Mobile should look exactly like desktop does in mobile mode
+- [ ] Publish mobile app in beta
+- [ ] **Mobile Release**
+- [ ] Create "live" lockscreen widget that shows current time working
+- [ ] Create dynamic island integration
+- [ ] Every 6 hours send notification asking if the user is still there.
 
 - [ ] Implement 3js as the timer
 - [ ] Create apple watch app (in a different repo)
