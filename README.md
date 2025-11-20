@@ -48,7 +48,6 @@ npm run tauri build
 ## To Do
 
 Bugs
-- [ ] On loading of time inbetween running states circles inside do not update
 
 User setting improvements
 - [ ] Create settings menu 
@@ -60,6 +59,7 @@ User setting improvements
 - [ ] Make sure the seconds can never go over max integer size
 
 ### To Do : Complete
+- [X] `11.20.2025` On loading of time inbetween running states circles inside now update
 - [X] `11.20.2025` On pressing break/work button while paused time now updates
 - [X] `11.18.2025` Times above 24 hours now display properly
 - [X] `11.14.2025` Move clicking on circles to hide to settings menu
