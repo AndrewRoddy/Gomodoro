@@ -18,11 +18,15 @@ export class ModeButton {
   // Local signal to track current break status
   public cPause = signal(this.timerService.isPaused());
 
+  // get seconds to update on press
+  public cSeconds = signal(this.timerService.seconds);
+
   constructor() {
     // Keep local signal in sync with the TimerService
     effect(() => {
       this.cBreak.set(this.timerService.isBreak());
       this.cPause.set(this.timerService.isPaused());
+
     });
   }
 

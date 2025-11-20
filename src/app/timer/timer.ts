@@ -22,8 +22,8 @@ export class Timer {
     public cRatio = signal(this.timerService.ratio());
 
     // Gets break and pause mode
-    public cBreak = this.timerService.isBreak();
-    public cPause = this.timerService.isPaused();
+    public cBreak = signal(this.timerService.isBreak());
+    public cPause = signal(this.timerService.isPaused());
     // Tracks whether we've already shown the end-of-break notification
     private breakNotified = false;
 
@@ -51,15 +51,15 @@ export class Timer {
         
             const serviceRatio = this.timerService.ratio();
             this.cRatio.set(serviceRatio);
+            
+            // Sync break and pause states
+            this.cBreak.set(this.timerService.isBreak());
+            this.cPause.set(this.timerService.isPaused());
         });
 
         // Runs once per 10th of a second.
         // Timer jumps forward is out of focus
         this.intervalId = setInterval(() => {
-            
-            // Refresh break/pause flags from the service
-            this.cBreak = this.timerService.isBreak();
-            this.cPause = this.timerService.isPaused();
             
             // Sets the title to the seconds
             if (this.showDashes() || this.cSeconds() <= 0) {
@@ -71,7 +71,7 @@ export class Timer {
             }
 
             // Make sure we don't send two notifications
-            if (this.breakNotified && !this.cBreak) {
+            if (this.breakNotified && !this.cBreak()) {
                 this.breakNotified = false;
             }
 
@@ -85,10 +85,10 @@ export class Timer {
 
                 // Compute per-second delta according to existing logic
                 let perSecond = 0;
-                if (this.cPause) { perSecond = 0; }
+                if (this.cPause()) { perSecond = 0; }
                 else { 
                     // If in break mode uses the break to get the ratio
-                    if (this.cBreak){ perSecond = (-1 * this.cRatio()); } 
+                    if (this.cBreak()){ perSecond = (-1 * this.cRatio()); } 
                     else {  perSecond = 1;  }
                 }
                 let newValue = this.cSeconds() + (perSecond * deltaSeconds);
@@ -101,7 +101,7 @@ export class Timer {
                 this.timerService.updateSeconds(newValue);
 
                 // Send notification if it makes sense
-                if (this.cBreak && this.cSeconds() === 0 && !this.breakNotified) {
+                if (this.cBreak() && this.cSeconds() === 0 && !this.breakNotified) {
                     this.breakNotified = true;
                     // Fire-and-forget the async permission + notification flow
                     void this.notifyBreakEnd();
@@ -154,7 +154,7 @@ export class Timer {
     // Formats the remaining number of seconds
     readonly formattedRemaining = computed(() => {
         let sec = this.cSeconds();
-        if (this.cBreak) sec = Math.ceil(sec/this.cRatio());
+        if (this.cBreak()) sec = Math.ceil(sec/this.cRatio());
 
         if (this.showDashes()) return '--:--';
         return this.formattedTime(sec);

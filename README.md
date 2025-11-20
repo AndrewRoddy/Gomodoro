@@ -49,9 +49,8 @@ npm run tauri build
 
 Bugs
 - [ ] On loading of time inbetween running states circles inside do not update
-- [ ] On pressing break/work button while paused time does not update
 
-User setting imporovements
+User setting improvements
 - [ ] Create settings menu 
     - [ ] Add "total time focused" time at bottom of settings
     - [ ] Add ability to reset back to time when last closed
@@ -61,6 +60,7 @@ User setting imporovements
 - [ ] Make sure the seconds can never go over max integer size
 
 ### To Do : Complete
+- [X] `11.20.2025` On pressing break/work button while paused time now updates
 - [X] `11.18.2025` Times above 24 hours now display properly
 - [X] `11.14.2025` Move clicking on circles to hide to settings menu
 - [X] `11.14.2025` Remove clicking on circles to hide
