@@ -52,12 +52,13 @@ User setting improvements
     - [ ] Add ability to reset back to time when last closed
       - Add saving previous time to local storage
       - Should save when it runs the "reopen" thing
-      
+
     - [ ] Add "total time focused" time at bottom of settings
     - [ ] Add subtract 15 minutes button
 - [ ] Make sure the seconds can never go over max integer size
 
 ### To Do : Complete
+- [X] `11.20.2025` Page no longer flashes light mode on load
 - [X] `11.20.2025` Timer keeps counting while tab is closed
 - [X] `11.20.2025` On loading of time inbetween running states circles inside now update
 - [X] `11.20.2025` On pressing break/work button while paused time now updates
