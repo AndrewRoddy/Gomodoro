@@ -37,6 +37,34 @@ export class Timer {
     private lastUpdate = Date.now();
 
     constructor() {
+        // Calculate elapsed time since last session if timer was running
+        if (!this.timerService.isPaused()) {
+            const savedTime = this.timerService.lastTimestamp();
+
+            // Allows to revert to previous timestamp
+            // this.timerService.updateUndoTimestamp(savedTime);
+
+            const now = Date.now();
+            const elapsedSeconds = (now - savedTime) / 1000;
+            
+            // Add elapsed time to current seconds
+            const currentSeconds = this.timerService.seconds();
+            let newSeconds = currentSeconds;
+            
+            if (this.timerService.isBreak()) {
+                // If in break mode, subtract time
+                newSeconds = currentSeconds - (elapsedSeconds * this.timerService.ratio());
+
+                // Make sure seconds don't go below zero
+                if (newSeconds < 0) newSeconds = 0;
+            } else {
+                // If in work mode, add time
+                newSeconds = currentSeconds + elapsedSeconds;
+            }
+            
+            this.timerService.updateSeconds(newSeconds);
+        }
+
         // Ask for notification permission immediately
         void this.requestNotificationPermission();
 
@@ -99,6 +127,9 @@ export class Timer {
                 // Update the signal & service
                 this.cSeconds.set(newValue);
                 this.timerService.updateSeconds(newValue);
+                
+                // Update the timestamp for elapsed time tracking
+                if (!this.cPause()) { this.timerService.updateLastTimestamp(now); }
 
                 // Send notification if it makes sense
                 if (this.cBreak() && this.cSeconds() === 0 && !this.breakNotified) {
@@ -108,7 +139,6 @@ export class Timer {
                 }
                 // Consume the elapsed time
                 this.lastUpdate = now;
-                this.timerService.updateSeconds(this.timerService.seconds());
             }
         }, 100); // Every 100ms (1/10th sec)
 

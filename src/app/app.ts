@@ -19,6 +19,9 @@ export class App {
   constructor() {
     // Watch for theme changes and apply to body
     effect(() => {
+      // Only run in browser environment
+      if (typeof window === 'undefined' || typeof document === 'undefined') return;
+      
       const theme = this.timerService.theme();
       // Remove all theme classes
       document.body.classList.remove('light', 'dark', 'midnight');
