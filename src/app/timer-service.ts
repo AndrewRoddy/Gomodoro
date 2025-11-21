@@ -15,7 +15,14 @@ export class TimerService {
       // Load saved seconds from localStorage
       const savedSeconds = localStorage.getItem('seconds');
       if (savedSeconds !== null) { // Only gets it if its already there
-        this.seconds.set(parseInt(savedSeconds, 10));
+        const parsedSeconds = parseInt(savedSeconds, 10);
+        // Validate: seconds should be a valid safe integer
+        if (!isNaN(parsedSeconds) && parsedSeconds >= 0 && parsedSeconds <= Number.MAX_SAFE_INTEGER) {
+          this.seconds.set(parsedSeconds);
+        } else {
+          // Clear invalid value
+          localStorage.removeItem('seconds');
+        }
       }
 
       // Ratio //
@@ -143,7 +150,7 @@ export class TimerService {
   }
 
   // Allows user to revert before new timestamp was added
-  // readonly undoTimestamp = signal(Date.now());
+  // readonly undoTimestamp = signal(0);
   // updateUndoTimestamp(value: number) { this.lastTimestamp.set(value);
   //   if (typeof window !== 'undefined' && window.localStorage) {
   //     localStorage.setItem('undoTimestamp', value.toString());
