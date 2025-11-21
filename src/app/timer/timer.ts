@@ -37,6 +37,20 @@ export class Timer {
     private lastUpdate = Date.now();
 
     constructor() {
+        // Request notification permission on page load
+        // Note: This must be triggered by user gesture in most browsers
+        // If denied, user can manually enable in browser settings
+        if (typeof window !== 'undefined' && 'Notification' in window) {
+            if (Notification.permission === 'default') {
+                // Use setTimeout to defer until after first render/user interaction
+                setTimeout(() => {
+                    Notification.requestPermission().catch(() => {
+                        // Permission denied or error - user can enable in settings
+                    });
+                }, 1000);
+            }
+        }
+        
         // Calculate elapsed time since last session if timer was running
         if (!this.timerService.isPaused()) {
             const savedTime = this.timerService.lastTimestamp();
@@ -65,8 +79,7 @@ export class Timer {
             this.timerService.updateSeconds(newSeconds);
         }
 
-        // Ask for notification permission immediately
-        void this.requestNotificationPermission();
+        
 
         // Sync with timer service when it changes externally
         effect(() => {

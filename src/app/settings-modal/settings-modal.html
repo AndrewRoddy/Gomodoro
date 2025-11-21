@@ -55,6 +55,7 @@
         </button>
       </div>
     </div>
+    
 
     
     <!-- Hide Circles -->
@@ -74,7 +75,43 @@
         </button>
       </div>
     </div>
+
     
+    
+    <!-- Reset Timer Button -->
+    <!-- <div class="setting-item">
+      <div class="setting-info">
+        <h3>Undo Time</h3>
+        <p>Revert to old session time</p>
+      </div>
+      <div class="toggle" role="tablist" aria-label="Hide Circles">
+        <button 
+          class="option bad" 
+          (click)="resetTimer()"
+          type="button">
+          Undo
+        </button>
+      </div>
+    </div> -->
+
+
+    <!-- Remove Time -->
+    <div class="setting-item">
+      <div class="setting-info">
+        <h3>Remove Time</h3>
+        <p>Remove minutes from your current time.</p>
+      </div>
+      <div class="toggle" role="tablist" aria-label="Work to break ratio">
+        <button
+          *ngFor="let opt of removeOptions"
+          class="option bad"
+          (click)="removeTime(opt)"
+          type="button">
+          {{opt}}m
+        </button>
+      </div>
+    </div>
+
     <!-- Reset Timer Button -->
     <div class="setting-item">
       <div class="setting-info">
@@ -90,5 +127,6 @@
         </button>
       </div>
     </div>
+
   </div>
 </div>
