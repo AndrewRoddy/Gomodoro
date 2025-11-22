@@ -47,6 +47,12 @@ npm run tauri build
 
 ## To Do
 
+Move Project to Ionic
+- [ ] **Move project to Ionic for Mobile**
+- [ ] Fully rework desktop layout for mobile
+  - Mobile should look exactly like desktop does in mobile mode
+- [ ] Publish mobile app in beta
+
 ### To Do : Complete
 - [X] `11.21.2025` Finish settings menu 
 - [X] `11.21.2025` Add ability to reset back to time when last closed
@@ -105,6 +111,12 @@ npm run tauri build
 
 ### Unimportant Cool Features
 
+
+- [ ] **Mobile Release**
+- [ ] Create "live" lockscreen widget that shows current time working
+- [ ] Create dynamic island integration
+- [ ] Every 6 hours send notification asking if the user is still there.
+
 Build Backend
 - [ ] Create backend boiler plate backend .NET
 - [ ] Set up render backend for the API calls
@@ -136,18 +148,7 @@ Improve window size
 Animations
 - [ ] Have starting from zero circle animation on reload / initial load
 
-Start recording
-- [ ] **Move project to Ionic for Mobile**
-- [ ] Create text logo
-- [ ] Create app icon
-- [ ] Fully rework desktop layout for mobile first
 
-  - Mobile should look exactly like desktop does in mobile mode
-- [ ] Publish mobile app in beta
-- [ ] **Mobile Release**
-- [ ] Create "live" lockscreen widget that shows current time working
-- [ ] Create dynamic island integration
-- [ ] Every 6 hours send notification asking if the user is still there.
 
 - [ ] Implement 3js as the timer
 - [ ] Create apple watch app (in a different repo)
