@@ -86,6 +86,8 @@ export class CircleFactory {
       
       if (updated.length < targetCount) {
         while (updated.length < targetCount) {
+          // Added limit to number of circles rendered
+          if (updated.length > 50) break;
           
           // Updates the first circle after it is re added by constructor
           if (targetCount > 1) {

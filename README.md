@@ -55,9 +55,10 @@ User setting improvements
     - [ ] Add "total time focused" time at bottom of settings
 
 ### To Do : Complete
+- [X] `11.21.2025` Limited circles size to prevent crashes at trillions of seconds
 - [X] `11.21.2025` Add subtract 1, 5, 60 minutes button
 - [X] `11.21.2025` Add subtract 15 minutes button
-- [X] `11.21.2025` Make sure the seconds can never go over max integer size
+- [X] `11.21.2025` Seconds can never go over max safe integer size (285m years)
 - [X] `11.20.2025` Page no longer flashes light mode on load
 - [X] `11.20.2025` Timer keeps counting while tab is closed
 - [X] `11.20.2025` On loading of time inbetween running states circles inside now update

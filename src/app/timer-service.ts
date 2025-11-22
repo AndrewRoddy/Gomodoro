@@ -17,11 +17,11 @@ export class TimerService {
       if (savedSeconds !== null) { // Only gets it if its already there
         const parsedSeconds = parseInt(savedSeconds, 10);
         // Validate: seconds should be a valid safe integer
-        if (!isNaN(parsedSeconds) && parsedSeconds >= 0 && parsedSeconds <= Number.MAX_SAFE_INTEGER) {
+        if (parsedSeconds >= 0 && parsedSeconds <= Number.MAX_SAFE_INTEGER) {
           this.seconds.set(parsedSeconds);
         } else {
           // Clear invalid value
-          localStorage.removeItem('seconds');
+          this.seconds.set(0);
         }
       }
 

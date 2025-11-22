@@ -153,7 +153,7 @@ export class Timer {
                 // Consume the elapsed time
                 this.lastUpdate = now;
             }
-        }, 100); // Every 100ms (1/10th sec)
+        }, 1); // Every 100ms (1/10th sec)
 
     }
 
