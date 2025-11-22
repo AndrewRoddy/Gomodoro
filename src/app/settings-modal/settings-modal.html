@@ -99,20 +99,20 @@
     </div>
 
     <!-- Undo Timer Button -->
-    <!-- <div class="setting-item">
+    <div class="setting-item">
       <div class="setting-info">
         <h3>Undo Time</h3>
-        <p>Revert to old session time</p>
+        <p>Revert if accidentally left timer running</p>
       </div>
       <div class="toggle" role="tablist" aria-label="Hide Circles">
         <button 
           class="option bad" 
-          (click)="resetTimer()"
+          (click)="undoTimer()"
           type="button">
           Undo
         </button>
       </div>
-    </div> -->
+    </div>
 
     <!-- Reset Timer Button -->
     <div class="setting-item">
@@ -130,5 +130,4 @@
       </div>
     </div>
 
-  </div>
 </div>

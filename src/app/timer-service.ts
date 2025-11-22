@@ -24,42 +24,42 @@ export class TimerService {
           this.seconds.set(0);
         }
       }
-
+      
       // Ratio //
       // Load saved ratio from localStorage (work:break ratio)
       const savedRatio = localStorage.getItem('ratio');
       if (savedRatio !== null) {
         this.ratio.set(parseInt(savedRatio, 10));
       }
-
+      
       // Theme //
       // Load saved ratio from localStorage (work:break ratio)
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme !== null) {
         this.theme.set(savedTheme);
       }
-
+      
       // Break //
       // Load saved break from localStorage
       const savedBreak = localStorage.getItem('break');
       if (savedBreak !== null) {
         this.isBreak.set(savedBreak === 'true');
       }
-
+      
       // Hidden Circles //
       // Load saved break from localStorage
       const hiddenCircles = localStorage.getItem('hideCircles');
       if (hiddenCircles !== null) {
         this.hideCircles.set(hiddenCircles);
       }
-
+      
       // Paused //
       // Load saved break from localStorage
       const isPaused = localStorage.getItem('paused');
       if (isPaused !== null) {
         this.isPaused.set(isPaused === 'true');
       }
-
+      
       // Last Timestamp //
       // Load saved timestamp from localStorage
       const lastTimestamp = localStorage.getItem('lastTimestamp');
@@ -69,10 +69,10 @@ export class TimerService {
 
       // Undo Timestamp //
       // Load saved undo timestamp from local storage
-      // const undoTimestamp = localStorage.getItem('undoTimestamp');
-      // if (undoTimestamp !== null) {
-      //   this.undoTimestamp.set(parseInt(undoTimestamp, 10));
-      // }
+      const undoTimestamp = localStorage.getItem('undoTimestamp');
+      if (undoTimestamp !== null) {
+        this.undoTimestamp.set(parseInt(undoTimestamp, 10));
+      }
 
     }
   }
@@ -131,8 +131,6 @@ export class TimerService {
     }
   }
 
-
-
   // Paused or not paused
   readonly isPaused = signal(false);
   updatePause(value: boolean) { this.isPaused.set(value);
@@ -150,12 +148,12 @@ export class TimerService {
   }
 
   // Allows user to revert before new timestamp was added
-  // readonly undoTimestamp = signal(0);
-  // updateUndoTimestamp(value: number) { this.lastTimestamp.set(value);
-  //   if (typeof window !== 'undefined' && window.localStorage) {
-  //     localStorage.setItem('undoTimestamp', value.toString());
-  //   }
-  // }
+  readonly undoTimestamp = signal(0);
+  updateUndoTimestamp(value: number) { this.undoTimestamp.set(value);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('undoTimestamp', value.toString());
+    }
+  }
 
 }
 

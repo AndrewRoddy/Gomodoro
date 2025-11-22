@@ -15,6 +15,8 @@ export class SettingsModal {
 
   // expose the ratio signal from the timer service
   // public undoTime = this.timerService.undoTimestamp;
+  public seconds = this.timerService.seconds;
+  public undoTime = this.timerService.undoTimestamp;
   public ratio = this.timerService.ratio;
   public theme = this.timerService.theme;
   public hideCircles = this.timerService.hideCircles;
@@ -48,7 +50,7 @@ export class SettingsModal {
     this.timerService.updateSeconds(0);
   }
 
-  // undoTimer() {
-    // this.timerService.updateSeconds(this.undoTime());
-  // }
+  undoTimer() {
+    this.timerService.updateSeconds(this.undoTime());
+  }
 }

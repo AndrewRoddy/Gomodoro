@@ -47,14 +47,10 @@ npm run tauri build
 
 ## To Do
 
-User setting improvements
-- [ ] Create settings menu 
-    - [ ] Add ability to reset back to time when last closed
-        - Add saving previous time to local storage
-        - Should save when it runs the "reopen" thing
-    - [ ] Add "total time focused" time at bottom of settings
-
 ### To Do : Complete
+- [X] `11.21.2025` Finish settings menu 
+- [X] `11.21.2025` Add ability to reset back to time when last closed
+- [X] `11.21.2025` Add saving previous time to local storage
 - [X] `11.21.2025` Limited circles size to prevent crashes at trillions of seconds
 - [X] `11.21.2025` Add subtract 1, 5, 60 minutes button
 - [X] `11.21.2025` Add subtract 15 minutes button

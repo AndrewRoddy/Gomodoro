@@ -51,12 +51,14 @@ export class Timer {
             }
         }
         
+        // Allows to revert to previous timestamp
+        this.timerService.updateUndoTimestamp(this.timerService.seconds());
+        
+        // IF CLOSE AND RE OPEN APP //
         // Calculate elapsed time since last session if timer was running
         if (!this.timerService.isPaused()) {
             const savedTime = this.timerService.lastTimestamp();
 
-            // Allows to revert to previous timestamp
-            // this.timerService.updateUndoTimestamp(savedTime);
 
             const now = Date.now();
             const elapsedSeconds = (now - savedTime) / 1000;
@@ -65,6 +67,8 @@ export class Timer {
             const currentSeconds = this.timerService.seconds();
             let newSeconds = currentSeconds;
             
+            
+
             if (this.timerService.isBreak()) {
                 // If in break mode, subtract time
                 newSeconds = currentSeconds - (elapsedSeconds * this.timerService.ratio());
@@ -133,6 +137,7 @@ export class Timer {
                     else {  perSecond = 1;  }
                 }
                 let newValue = this.cSeconds() + (perSecond * deltaSeconds);
+                let newAllTime = this.cSeconds() + (perSecond * deltaSeconds);
 
                 // Prevent negative numbers
                 if (newValue < 0) newValue = 0;
