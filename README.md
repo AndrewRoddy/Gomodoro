@@ -44,6 +44,12 @@ Build exe with tauri
 npm run tauri build
 ```
 
+To build for iOS
+```
+npm run build
+npx cap sync ios
+```
+Then continue with [link](https://dashboard.ionicframework.com/)
 
 ## To Do
 
