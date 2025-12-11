@@ -44,6 +44,7 @@ export class SettingsModal {
     let newTime = this.timerService.seconds() - minutes
     if (newTime <= 0) newTime = 0
     this.timerService.updateSeconds(newTime);
+    this.timerService.triggerRefresh();
   }
   
   addTime(secs: number) {
@@ -51,6 +52,7 @@ export class SettingsModal {
     let newTime = this.timerService.seconds() + minutes
     if (newTime <= 0) newTime = 0
     this.timerService.updateSeconds(newTime);
+    this.timerService.triggerRefresh();
   }
   
   resetTimer() {

@@ -155,5 +155,9 @@ export class TimerService {
     }
   }
 
+  // Refresh trigger for forcing circle updates
+  readonly refreshTrigger = signal(0);
+  triggerRefresh() { this.refreshTrigger.set(this.refreshTrigger() + 1); }
+
 }
 
