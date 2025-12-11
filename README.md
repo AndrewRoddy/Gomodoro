@@ -60,6 +60,7 @@ Move Project to Ionic
 - [ ] Publish mobile app in beta
 
 ### To Do : Complete
+- [X] `12.11.2025` Add time to the timer with buttons
 - [X] `11.21.2025` Finish settings menu 
 - [X] `11.21.2025` Add ability to reset back to time when last closed
 - [X] `11.21.2025` Add saving previous time to local storage

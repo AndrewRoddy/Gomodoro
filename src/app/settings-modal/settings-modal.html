@@ -76,6 +76,23 @@
       </div>
     </div>
 
+    <!-- Add Time -->
+    <div class="setting-item">
+      <div class="setting-info">
+        <h3>Add Time</h3>
+        <p>Add minutes to your current time.</p>
+      </div>
+      <div class="toggle" role="tablist" aria-label="Work to break ratio">
+        <button
+          *ngFor="let opt of removeOptions"
+          class="option good"
+          (click)="addTime(opt)"
+          type="button">
+          {{opt}}m
+        </button>
+      </div>
+    </div>
+
     <!-- Remove Time -->
     <div class="setting-item">
       <div class="setting-info">

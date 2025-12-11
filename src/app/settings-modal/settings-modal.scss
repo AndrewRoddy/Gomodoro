@@ -161,6 +161,18 @@
           box-shadow: 0 4px 8px var(--shadow6-red);
         }
       }
+
+      &.good {
+        background: var(--orange);
+        border-color: var(--orange);
+        color: var(--text-white);
+
+        &:hover {
+          background: var(--orange);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px var(--shadow6-orange);
+        }
+      }
     }
   }
 
