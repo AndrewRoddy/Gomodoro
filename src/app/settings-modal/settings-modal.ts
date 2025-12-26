@@ -22,7 +22,7 @@ export class SettingsModal {
   public hideCircles = this.timerService.hideCircles;
   
   // options for ratio (work : break)
-  public ratioOptions = [1, 2, 3, 4, 5, 6, 8, 10, 15, 20, 30, 60];
+  public ratioOptions = [1, 2, 3, 4, 5];
   public removeOptions = [1, 5, 15, 60];
   public themeOptions = ["Light", "Dark", "Midnight"];
   public hideCircleOptions = ["Show", "Hide"];

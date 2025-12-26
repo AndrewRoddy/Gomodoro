@@ -169,4 +169,3 @@ Animations
     - [ ] Include leveling up / evolving pets with "coins"
     - [ ] Include a shiny mechanic 1/8000 chance
 
-
